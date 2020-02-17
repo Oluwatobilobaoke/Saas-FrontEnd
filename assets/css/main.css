@@ -803,7 +803,7 @@
      .job-search-form .form-group {
        margin-bottom: 0; }
        .job-search-form .form-group .form-control {
-         height: 46px; }
+         height: 4px; }
        .job-search-form .form-group i {
          position: absolute;
          top: 14px;
@@ -815,9 +815,9 @@
        font-size: 14px;
        line-height: 25px;
        border: 0;
-       border-radius: 30px;
+       border-radius: 4px;
        height: 46px;
-       border: 1px solid #ececec;
+       border: 1px solid #000000;
        color: #495057;
        padding: 10px 20px;
        z-index: 1;
