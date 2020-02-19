@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="assets/css/login.css">
+        <script type="text/javascript" src="./assets/js/homepage.js"></script>
     </head>
 
     <body>
@@ -20,61 +21,107 @@
                   <h5 class="card-title text-center">Create an Account</h5>
                   <form class="form-signin">
                     <div class="form-label-group">
-                        <select name="" class="form-control">
-                            <option value="">Select your Account Type</option>
-                            <option>Student</option>
-                            <option>Organisation</option>
+                        <select name="" class="form-control" id="selectUserCategory">
+                            <option value="0">Select your Account Type</option>
+                            <option value="student">Student</option>
+                            <option value="organization">Organisation</option>
                           </select>
                     </div>
-                    
-                    <div class="form-label-group">
-                        <input type="name" id="inputName" class="form-control" placeholder="Organisational Name" required>
-                        <label for="inputName">Organisation Name</label>
+                    <!-- This is the account Creation Section for Students -->
+                    <section id="studentAccountCreationSection">
+                        <div class="form-label-group">
+                            <input type="name" id="inputName" class="form-control" placeholder="Full Name" required>
+                            <label for="inputName">Full Name</label>
+                          </div>
+
+                          <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <label for="inputEmail">Email address</label>
+                          </div>
+
+                          <div class="form-label-group">
+                            <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" required autofocus>
+                            <label for="inputPhone">Phone Number</label>
+                          </div>
+
+                          <div class="form-label-group">
+                            <input type="text" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
+                            <label for="inputAddress">Address</label>
+                          </div>
+
+                          <div class="form-label-group">
+                            <select name="" class="form-control">
+                                <option value="">Availability</option>
+                                <option>Freelance</option>
+                                <option>Full Time</option>
+                                <option>Part Time</option>
+                                <option>Week Days</option>
+                                <option>Week End</option>
+                              </select>
+                          </div>
+
+                          <div class="form-label-group">
+                            <input type="range" id="inputRange" class="form-control" placeholder="Range" required autofocus>
+                            <label for="inputRange">Hourly rate</label>
+                          </div>
+
+                        <div class="form-label-group">
+                          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                          <label for="inputPassword">Password</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <input type="password" id="inputPassword" class="form-control" placeholder="Retype Password" required>
+                          <label for="inputPassword">Retype Password</label>
+                        </div>
+
+                    </section>
+                    <!-- This is the Account Creations for Organizations -->
+                    <section id="organizationAccountCreationSection">
+                        <div class="form-label-group">
+                          <input type="name" id="inputName" class="form-control" placeholder="Organisational Name" required>
+                          <label for="inputName">Organisation Name</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                          <label for="inputEmail">Email address</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" required autofocus>
+                          <label for="inputPhone">Phone Number</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <input type="text" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
+                          <label for="inputAddress">Address</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <input type="text" id="inputDescription" class="form-control" placeholder="Description" required autofocus>
+                          <label for="inputDescription">Description</label>
+                        </div>
+
+                        <div class="form-label-group">
+                          <select name="" class="form-control" id="companyCategories">
+                              <option value="categories" data-id=0>Categories</option>
+                            </select>
+                        </div>
+
+
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <label for="inputPassword">Password</label>
                       </div>
 
                       <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Retype Password" required>
+                        <label for="inputPassword">Retype Password</label>
                       </div>
+                    </section>
 
-                      <div class="form-label-group">
-                        <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" required autofocus>
-                        <label for="inputPhone">Phone Number</label>
-                      </div>
-
-                      <div class="form-label-group">
-                        <input type="text" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
-                        <label for="inputAddress">Address</label>
-                      </div>
-
-                      <div class="form-label-group">
-                        <input type="text" id="inputDescription" class="form-control" placeholder="Description" required autofocus>
-                        <label for="inputDescription">Description</label>
-                      </div>
-
-                      <div class="form-label-group">
-                        <select name="" class="form-control">
-                            <option value="">Categories</option>
-                            <option>Freelance</option>
-                            <option>Full Time</option>
-                            <option>Part Time</option>
-                            <option>Week Days</option>
-                            <option>Week End</option>
-                          </select>
-                      </div>
-
-
-                    <div class="form-label-group">
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                      <label for="inputPassword">Password</label>
-                    </div>
-
-                    <div class="form-label-group">
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Retype Password" required>
-                      <label for="inputPassword">Retype Password</label>
-                    </div>
-
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="createAccountBtn" type="submit" disabled>Sign Up</button>
                     <hr class="my-4">
                     <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign Up with Google</button>
                   </form>

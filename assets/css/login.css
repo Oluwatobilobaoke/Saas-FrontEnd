@@ -108,6 +108,11 @@
     color: white;
     background-color: #3b5998;
   }
+
+
+#organizationAccountCreationSection, #studentAccountCreationSection{
+  display: none;
+}
   
   /* Fallback for Edge
   -------------------------------------------------- */
