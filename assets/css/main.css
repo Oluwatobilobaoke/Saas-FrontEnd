@@ -1419,8 +1419,8 @@
        color: #666666; }
      .job-listings .btn-open {
        color: #26ae61;
-       padding: 7px 21px;
-       line-height: 50px;
+       padding: 7px 18px;
+       line-height: 25px;
        border-radius: 30px;
        margin: 15px 0;
        background: #d5ffe7;
@@ -1442,9 +1442,9 @@
      .job-listings .btn-apply {
        color: #26ae61;
        text-transform: uppercase;
-       line-height: 50px;
+       line-height: 25px;
        border: 2px solid #26ae61;
-       padding: 7px 21px;
+       padding: 7px 18px;
        border-radius: 30px;
        -webkit-transition: all .4s ease;
        -moz-transition: all .4s ease;
