@@ -4,8 +4,8 @@
   }
   
   body {
-    background: #fefeff;
-    background: linear-gradient(to right, rgb(242, 246, 250), rgb(255, 255, 255));
+    background: #F8F8F8;
+    background: linear-gradient(to right, rgb(245, 246, 250), rgb(248, 248, 248));
   }
   
   .card-signin {
@@ -102,16 +102,68 @@
   }
   
   .btn-google {
-    color: black;
-    /* background-color: #e6ebf5; */
-    box-shadow: ghostwhite;
-    background-color: blanchedalmond;
+    background: #fff;
+    border-radius: 5px;
+    border-width: 0;
+    border: 1px solid #ddd;
+    color: #737373
   }
+
+  
   
   .btn-facebook {
     color: white;
     background-color: #000000;
   }
+
+  .third-party-signups {
+    margin-bottom: 25px
+}
+
+.button {
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  margin: auto auto 5px auto;
+  max-width: 400px;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-appearance: none
+}
+
+a.google-branded-button {
+  background: #fff;
+  border-radius: 5px;
+  border-width: 0;
+  border: 2px solid #ddd;
+  color: #737373
+}
+
+a.google-branded-button:hover,
+a.google-branded-button:focus {
+  text-decoration: none;
+  border: 1px solid #bbb
+}
+
+a.google-branded-button:active {
+  background-color: #e5e5e5
+}
+
+span.google-branded-button-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 8px 0 20px 8px;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box
+}
+
+span.google-branded-button-text {
+  font-weight: bold;
+  font-family: 'Roboto', arial, sans-serif
+}
 
 
 #organizationAccountCreationSection, #studentAccountCreationSection{
