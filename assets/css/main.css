@@ -61,6 +61,11 @@
      font-size: 40px;
      font-weight: 700;
      color: #191c1e; }
+	 h6 {
+        font-family: 'Rubik', sans-serif;
+     font-size: 20px;
+     font-weight: 700;
+     color: #191c1e; }
    
    ul {
      margin: 0;
@@ -114,7 +119,7 @@
      letter-spacing: 1px;
      font-weight: 400;
      color: #fff;
-     border: none;
+   /* border: none; */
      text-transform: uppercase;
      -webkit-transition: all 0.3s ease-in-out;
      -moz-transition: all 0.3s ease-in-out;
@@ -127,9 +132,25 @@
      box-shadow: none;
      outline: none; }
    
-   .btn-common {
-     background: #26ae61;
+      .btn-cv {
+        background: white;
+        position: relative;
+        border-radius: 4px;
+        z-index: 1;
+        
+      }
+	       .btn-white {
+     background: #ffff;
      position: relative;
+     border-radius: 4px;
+	 border-color: #191c1e;
+	 color: #191c1e;
+     z-index: 1; }
+
+     .btn-common {
+     background: #000000;
+     position: relative;
+     border-radius: 4px;
      z-index: 1; }
      .btn-common:hover {
        color: #fff;
@@ -143,7 +164,7 @@
      width: 100%;
      height: 100%;
      z-index: 1;
-     border-radius: 30px;
+     border-radius: 5px;
      opacity: 0;
      transform: scale(0, 0);
      z-index: -1;
@@ -254,7 +275,10 @@
    .page-header {
      padding: 115px 0px 50px;
      position: relative;
-     background: url(../img/banner1.jpg); }
+     background: #F8F8F8;
+    background: linear-gradient(to right, rgb(245, 246, 250), rgb(248, 248, 248));
+     /* background: url(../img/banner1.jpg); */
+     }
      .page-header .inner-header {
        width: 100%;
        position: relative;
@@ -472,7 +496,7 @@
      cursor: pointer;
      text-align: center;
      border-radius: 30px;
-     background: #26ae61;
+     background: #000000;
      border: 1px solid #fff;
      z-index: 99; }
    
@@ -820,7 +844,7 @@
        line-height: 25px;
        border: 0;
        border-radius: 4px;
-       height: 46px;
+       height: 40px;
        border: 1px solid #000000;
        color: #495057;
        padding: 10px 20px;
@@ -836,7 +860,7 @@
        display: inline-block;
        position: relative;
        outline: none !important;
-       background: #26ae61;
+       background: #000000;
        color: #fff;
        cursor: pointer;
        border: none;
@@ -874,7 +898,7 @@
    
    .job-featured-search {
      padding: 15px 0;
-     border-radius: 6px; }
+     border-radius: 6x; }
    
    /* ==========================================================================
     About Page Style
@@ -2239,7 +2263,7 @@
        .sideber .subscribe-form .form-group {
          position: relative; }
          .sideber .subscribe-form .form-group .form-control {
-           border-radius: 30px;
+           border-radius: 5px;
            background: transparent;
            color: #fff;
            padding: 8px 15px; }
@@ -2253,15 +2277,15 @@
            height: 39px;
            border-top-left-radius: 0px;
            border-bottom-left-radius: 0px;
-           border-top-right-radius: 30px;
-           border-bottom-right-radius: 30px;
+           border-top-right-radius: 5px;
+           border-bottom-right-radius: 5px;
            background: transparent;
            background: #26ae61; }
            .sideber .subscribe-form .form-group .btn-common:before {
              border-top-left-radius: 0px;
              border-bottom-left-radius: 0px;
-             border-top-right-radius: 30px;
-             border-bottom-right-radius: 30px; }
+             border-top-right-radius: 5px;
+             border-bottom-right-radius: 5px; }
    
    .post-job .job-title {
      margin-bottom: 15px;
@@ -2274,9 +2298,9 @@
    .post-job .styled-select {
      width: 100%;
      background-color: #FFF;
-     border-radius: 30px;
+     border-radius: 5px;
      border: 1px solid #ddd;
-     border-radius: 30px;
+     
      color: #9a9a9a;
      padding: 0 15px;
      display: block; }
@@ -2825,7 +2849,7 @@
      height: 46px;
      padding: 0 20px;
      font-size: 14px;
-     border-radius: 30px;
+     border-radius: 5px;
      border: 1px solid #ececec;
      -webkit-transition: all 0.3s;
      -moz-transition: all 0.3s;
@@ -2993,7 +3017,7 @@
      .subscribe-form .form-wrapper .form-control {
        display: block;
        width: 100%;
-       height: 66px;
+       height: 55px;
        text-align: left;
        font-size: 14px;
        padding: 0 25px;
@@ -3002,13 +3026,13 @@
        color: #fff;
        font-weight: 400;
        background: transparent;
-       border: 1px solid #b1b1b1;
-       border-radius: 50px;
+       border: 1px solid #000000;
+       border-radius: 6px;
        background-image: none;
        background-clip: padding-box; }
      .subscribe-form .form-wrapper .form-control:focus {
        color: #333;
-       border-color: #26ae61;
+       border-color: #000000;
        box-shadow: none;
        outline: 0; }
      .subscribe-form .form-wrapper .btn-search {
@@ -3017,9 +3041,10 @@
        z-index: 2;
        width: 156px;
        font-weight: 400;
-       background: #26ae61;
+       background: #000000;
        color: #fff;
-       height: 52px;
+       height: 47px;
+       border-radius: 5px;
        text-align: center;
        position: absolute;
        padding: 0px; }
@@ -3085,16 +3110,16 @@
    .block-title {
      font-size: 20px;
      font-weight: 500;
-     color: #fff;
+     color: #000000;
      margin-bottom: 20px;
      position: relative; }
    
    footer .footer-Content {
-     background-color: #24324a;
+     background-color: #F8F8F8;
      padding: 60px 0;
-     color: #8a99b3; }
+     color: #787676; }
      footer .footer-Content p {
-       color: #8a99b3; }
+       color: #787676; }
    
    .footer-logo {
      margin-bottom: 0; }
@@ -3161,7 +3186,7 @@
      #subscribe-form .form-group {
        position: relative; }
        #subscribe-form .form-group .form-control {
-         border-radius: 30px;
+         border-radius: 5px;
          background: transparent;
          color: #fff;
          border: 1px solid #536688;
@@ -3169,7 +3194,7 @@
          height: 40px;
          line-height: 40px; }
          #subscribe-form .form-group .form-control:focus {
-           border-color: #26ae61; }
+           border-color: black; }
        #subscribe-form .form-group .btn-common {
          position: absolute;
          top: 0;
@@ -3178,15 +3203,15 @@
          height: 40px;
          border-top-left-radius: 0px;
          border-bottom-left-radius: 0px;
-         border-top-right-radius: 30px;
-         border-bottom-right-radius: 30px;
+         border-top-right-radius: 0px;
+         border-bottom-right-radius: 0px;
          background: transparent;
-         background: #26ae61; }
+         background: #000000; }
          #subscribe-form .form-group .btn-common:before {
            border-top-left-radius: 0px;
            border-bottom-left-radius: 0px;
-           border-top-right-radius: 30px;
-           border-bottom-right-radius: 30px; }
+           border-top-right-radius: 0px;
+           border-bottom-right-radius: 0px; }
    
    .footer-social {
      margin-top: 20px; }
