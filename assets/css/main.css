@@ -682,6 +682,48 @@
    .fadeInUpMenu {
      -webkit-animation-name: fadeInUpMenu;
      animation-name: fadeInUpMenu; }
+
+     .nav-link img {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      margin: -8px 0;
+      float: right;
+      margin-right: 16px;
+      margin-top: 2px;
+    }
+
+    .navbar .nav-item i {
+      font-size: 18px;
+    }
+    .navbar .dropdown-item i {
+      font-size: 16px;
+      min-width: 22px;
+    }
+    .navbar .nav-item.open > a {
+      background: none !important;
+    }
+    .navbar .dropdown-menu {
+      border-radius: 1px;
+      border-color: #787878;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+    .navbar .dropdown-menu li a {
+      color: #787676;
+      padding: 8px 20px;
+      line-height: normal;
+    }
+    .navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+      color: #787676;
+    }	
+    .navbar .dropdown-item .material-icons {
+      font-size: 21px;
+      line-height: 16px;
+      vertical-align: middle;
+      margin-top: -2px;
+    }
+
+
    
    /* only small tablets */
    @media (min-width: 768px) and (max-width: 991px) {
@@ -1885,23 +1927,25 @@
      margin-bottom: 30px;
      box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
      .right-sideabr h4 {
-       font-size: 18px;
-       color: #333;
+       font-size: 16px;
+       color: #000000;
        padding: 15px 20px;
        font-weight: 500;
-       background: #f2f7fb;
+       background: #ffffff;
        margin-bottom: 0; }
      .right-sideabr .list-item li {
        padding: 15px 20px;
-       border-bottom: 1px solid #f7f7f7; }
+       border-bottom: 1px solid #FFFFFF; }
        .right-sideabr .list-item li a {
+         
          font-size: 14px;
          font-weight: 400;
-         color: #9a9a9a; }
+         color: #787676; }
          .right-sideabr .list-item li a:hover {
-           color: #26ae61; }
+           color: #787676; }
        .right-sideabr .list-item li a.active {
-         color: #26ae61; }
+        box-shadow: px 1px 10px rgba(120, 118, 118, 0.25);
+         color: #16161d; }
      .right-sideabr .list-item .notinumber {
        float: right;
        width: 20px;
@@ -2247,8 +2291,8 @@
      box-shadow: 0px 0px 14px rgba(248, 248, 248, 1); }
      .sideber .widghet {
        margin-bottom: 30px; }
-       .sideber .widghet h3, h5 {
-         font-size: 26px;
+       .sideber .widghet h3, h5, h6{
+         font-size: 20px;
          margin-bottom: 20px;
          color: #000000;
          font-weight: 500; }
