@@ -66,6 +66,13 @@
      font-size: 20px;
      font-weight: 700;
      color: #787676; }
+
+     p {
+       font-family: 'Rubik', sans-serif;
+       font-size: 14px;
+       font-weight: 200;
+       color: #787676;
+     }
    
    ul {
      margin: 0;
@@ -1943,9 +1950,12 @@
          color: #787676; }
          .right-sideabr .list-item li a:hover {
            color: #787676; }
-       .right-sideabr .list-item li a.active {
-        box-shadow: px 1px 10px rgba(120, 118, 118, 0.25);
-         color: #16161d; }
+       .right-sideabr .list-item li a.active a:hover {
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 60px;
+        color: #16161d; }
      .right-sideabr .list-item .notinumber {
        float: right;
        width: 20px;
