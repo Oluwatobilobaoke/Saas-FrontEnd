@@ -695,7 +695,7 @@
       width: 36px;
       height: 36px;
       margin: -8px 0;
-      float: right;
+      float: left;
       margin-right: 16px;
       margin-top: 2px;
     }
@@ -1948,14 +1948,9 @@
          font-size: 14px;
          font-weight: 400;
          color: #787676; }
-         .right-sideabr .list-item li a:hover {
-           color: #787676; }
        .right-sideabr .list-item li a.active a:hover {
-        background-color: #000000;
-        border-radius: 5px;
-        border: none;
         padding: 10px 60px;
-        color: #16161d; }
+        color: #b90b0b; }
      .right-sideabr .list-item .notinumber {
        float: right;
        width: 20px;
