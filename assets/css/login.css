@@ -101,6 +101,27 @@
     color: #777;
   }
   
+  .or-seperator {
+    margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+  }
+  .or-seperator b {
+      padding: 0 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  display: inline-block;
+      border: 1px solid #e0e0e0;
+  border-radius: 50%;
+      position: relative;
+      top: -22px;
+      z-index: 1;
+  }
+
   .btn-google {
     background: #fff;
     border-radius: 5px;
