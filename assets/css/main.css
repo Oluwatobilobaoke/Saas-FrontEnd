@@ -855,6 +855,9 @@
    @media (max-width: 767px) {
      .sticky-menu {
        margin: 0; } }
+
+
+       
    /* ==========================================================================
       Hero Area
       ========================================================================== */
@@ -1875,7 +1878,7 @@
      border-bottom: 1px solid #f1f1f1; }
      .job-browse .cat-list li a {
        text-decoration: none;
-       color: #999;
+       color: #787676;
        display: inline-block;
        transition: all 0.2s ease-in-out;
        -moz-transition: all 0.2s ease-in-out;
@@ -1975,12 +1978,14 @@
      .job-alerts-item .alerts-content {
        padding: 30px 0;
        border-bottom: 1px solid #f1f1f1; }
-       .job-alerts-item .alerts-content h3 {
-         font-size: 16px; }
+       .job-alerts-item .alerts-content h4 {
+         font-size: 30px;
+         text; 
+        }
        .job-alerts-item .alerts-content .location {
-         color: #9a9a9a; }
+         color: #787676; }
        .job-alerts-item .alerts-content p {
-         color: #9a9a9a;
+         color: #787676;
          margin-top: 15px;
          line-height: 20px; }
          .job-alerts-item .alerts-content p i {
@@ -2301,13 +2306,25 @@
          margin-bottom: 20px;
          color: #000000;
          font-weight: 500; }
+
+         .sideber .widghet h4{
+          font-size: 30px;
+          margin-bottom: 20px;
+          color: #000000;
+          font-weight: 500; }
+
      .sideber .imgprofile .imgprofile-full {
-       width: 100%;
-       height: 250px; }
-       .sideber .imgprofile .imgprofile-full iframe {
+        display: block;
+        max-width:270px;
+        max-height:270px;
+        width: auto;
+        height: auto; 
+       overflow: hidden;
+      	}
+       .sideber .imgprofile .imgprofile-full img {
          width: 100%;
          height: 100%;
-         border: none; }
+         display: block; }
      .sideber .share-job #subscribe-form .form-group .form-control {
        border: 1px solid #eaeaea; }
      .sideber .share-job .meta-tag {
@@ -2697,11 +2714,11 @@
          position: relative;
          font-size: 14px;
          text-transform: uppercase;
-         background: #26ae61;
+         background: #787676;
          display: block;
          color: #fff; }
          .pagination li a:hover {
-           box-shadow: 0px 7px 9px rgba(96, 94, 94, 0.17); }
+           box-shadow: 0px 7px 9px rgba(120, 118, 118, 1); }
          .pagination li a:before {
            content: '';
            position: absolute;
@@ -2711,7 +2728,7 @@
            height: 100%;
            z-index: 1;
            border-radius: 30px;
-           background-color: rgba(255, 255, 255, 0.2);
+           background-color: rgbargba(120, 118, 118, 1);
            -webkit-transition: all 0.3s ease-out 0s;
            -moz-transition: all 0.3s ease-out 0s;
            -ms-transition: all 0.3s ease-out 0s;
@@ -2749,7 +2766,7 @@
      .search-btn i {
        color: #666; }
    
-   #sidebar .widget {
+   /* #sidebar .widget {
      margin-bottom: 30px;
      box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
    #sidebar .widget-box {
@@ -2805,7 +2822,7 @@
      -webkit-transition: all 0.4s ease-in-out;
      -o-transition: all 0.4s ease-in-out; }
      #sidebar .tag a:hover {
-       color: #fff; }
+       color: #fff; } */
    
    .single-post p {
      margin-bottom: 20px !important; }
@@ -2905,9 +2922,48 @@
      color: #007bb5;
      border-color: #007bb5; }
    
+
    /* ==========================================================================
      Contact Us
     ========================================================================== */
+	
+	.review-group {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 105px;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 25px;
+    box-shadow: none;
+    margin-bottom: 0;
+    color: #000;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-image: none;
+    background-clip: padding-box;
+}
+.review-group input::value {
+       color: #787676;
+       font-weight: 400;
+background: red;
+    border: 1px solid #000000;	   }
+}
+	.review-control {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 2px solid #343a40;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-color: #343a40;
+    padding: 0 20px;
+    padding-right: 50px;
+	}
+	
+	
    .form-control {
      width: 100%;
      height: 46px;
