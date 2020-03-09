@@ -41,7 +41,7 @@
    
    p {
      font-size: 14px;
-     color: #9a9a9a;
+     color: #787676;
      line-height: 26px;
      font-family: 'Rubik', sans-serif;
      margin-bottom: 0; }
@@ -206,8 +206,8 @@
      cursor: pointer;
      background-color: transparent;
      position: relative;
-     border-color: #26ae61;
-     color: #26ae61; }
+     border-color: #787676;
+     color: #787676; }
      .btn-border:hover {
        box-shadow: 0px 7px 9px rgba(96, 94, 94, 0.17); }
    
@@ -234,7 +234,7 @@
      cursor: pointer;
      background-color: #fff;
      border: 2px solid #fff;
-     color: #26ae61; }
+     color: #787676; }
      .btn-border-filled:hover {
        color: #fff;
        background-color: transparent;
@@ -259,7 +259,7 @@
    .btn-border-fill {
      background: #fff;
      border-color: #fff;
-     color: #26ae61; }
+     color: #787676; }
    
    .btn-subtitle {
      color: #787676;
@@ -463,7 +463,7 @@
      left: 0;
      right: 0;
      bottom: 0;
-     background-color: #fff;
+     background-color: #f8f8f8;
      z-index: 9999999; }
    
    .loader {
@@ -483,14 +483,14 @@
      height: 100%;
      border-radius: 100%;
      border: 7px solid transparent;
-     border-top-color: #26ae61; }
+     border-top-color: #787676; }
    
    #loader-1:before {
      z-index: 100;
      animation: spin 2s infinite; }
    
    #loader-1:after {
-     border: 7px solid #fafafa; }
+     border: 7px solid #f8f8f8; }
    
    @keyframes spin {
      0% {
@@ -517,12 +517,12 @@
      cursor: pointer;
      text-align: center;
      border-radius: 30px;
-     background: #000000;
-     border: 1px solid #F8F8F8;
+     background: #F8F8F8;
+     border: 1px solid #787676;
      z-index: 99; }
    
    .back-to-top i {
-     color: #F8F8F8;
+     color: #787676;
      font-size: 16px;
      -webkit-transition: all 0.3s ease-in-out;
      -moz-transition: all 0.3s ease-in-out;
@@ -985,47 +985,13 @@
      text-align: center; }
      .work-process .process-icon {
        font-size: 48px;
-       color: #26ae61;
+       color: #787676;
        display: inline-block;
        margin-bottom: 10px; }
      .work-process h4 {
        font-size: 20px;
        font-weight: 500;
        margin-bottom: 10px; }
-   
-   #download .download-wrapper {
-     width: 100%;
-     display: table;
-     height: 100%; }
-     #download .download-wrapper > div {
-       vertical-align: middle;
-       display: table-cell; }
-     #download .download-wrapper .download-text h4 {
-       font-size: 36px;
-       font-weight: 500;
-       margin-bottom: 30px; }
-     #download .download-wrapper p {
-       margin-bottom: 35px; }
-     #download .download-wrapper .app-button .btn {
-       border-radius: 30px;
-       width: 200px;
-       text-align: left;
-       font-size: 14px;
-       font-weight: 700;
-       padding: 7px 17px;
-       margin-right: 10px;
-       text-transform: capitalize; }
-       #download .download-wrapper .app-button .btn i {
-         display: inline-block;
-         font-size: 30px;
-         float: left;
-         line-height: 36px;
-         margin-right: 10px; }
-       #download .download-wrapper .app-button .btn span {
-         font-size: 13px;
-         font-weight: 400; }
-     #download .download-wrapper .app-button .btn-common {
-       border: 2px solid #26ae61; }
    
    .browse-catagories .img-box {
      display: inline-block;
@@ -1073,7 +1039,7 @@
    #apply .no-padding {
      padding: 0; }
    #apply .recruiter {
-     background: #26ae61;
+     background: #787676;
      position: relative; }
      #apply .recruiter .img-thumb {
        position: absolute;
@@ -1120,13 +1086,13 @@
        position: relative; }
        .jobs-services .services-inner .icon i {
          font-size: 50px;
-         color: #26ae61; }
+         color: #787676; }
      .jobs-services .services-inner .detail {
        margin-left: 20px;
        display: inline-block;
        text-align: left; }
        .jobs-services .services-inner .detail h4 {
-         color: #333333;
+         color: #787676;
          font-size: 20px;
          font-weight: 500; }
        .jobs-services .services-inner .detail span {
@@ -1288,7 +1254,7 @@
        transition: all .3s linear;
        color: #333; }
        .f-category h3:hover {
-         color: #26ae61; }
+         color: #787676; }
      .f-category p {
        color: #9a9a9a; }
    
@@ -1298,7 +1264,7 @@
      -webkit-transform: scale(1.1); }
    
    .bg-color-1 {
-     background: #26ae61; }
+     background: #787676; }
    
    .bg-color-2 {
      background: #4DADF5; }
@@ -1411,8 +1377,8 @@
        -webkit-transition: all 0.3s ease-in-out;
        -o-transition: all 0.3s ease-in-out; }
    #latest-jobs .save-icon:hover i {
-     border-color: #26ae61;
-     background: #26ae61;
+     border-color: #787676;
+     background: #787676;
      color: #fff; }
    
    /* ==========================================================================
@@ -1433,7 +1399,7 @@
        .product-item .product-content .tags {
          margin-bottom: 15px; }
          .product-item .product-content .tags span {
-           color: #26ae61;
+           color: #787676;
            font-size: 14px;
            margin-right: 5px; }
            .product-item .product-content .tags span i {
@@ -1448,7 +1414,7 @@
          font-weight: 500;
          font-size: 18px; }
          .product-item .product-title a:hover {
-           color: #26ae61; }
+           color: #787676; }
    
    .owl-nav {
      position: relative;
@@ -1467,7 +1433,7 @@
      width: 40px;
      height: 40px;
      display: block !important;
-     background: #26ae61 !important;
+     background: #787676 !important;
      text-align: center;
      display: inline-block;
      opacity: 1 !important;
@@ -1508,12 +1474,12 @@
        -webkit-transition: all 0.4s ease-in-out;
        -o-transition: all 0.4s ease-in-out; }
        .job-listings .job-details h3:hover {
-         color: #26ae61; }
+         color: #787676; }
      .job-listings .job-details .company-neme {
        font-size: 14px;
-       color: #666666; }
+       color: #787676; }
      .job-listings .btn-open {
-       color: #26ae61;
+       color: #787676;
        padding: 7px 18px;
        line-height: 25px;
        border-radius: 30px;
@@ -1525,20 +1491,20 @@
        transition: all 0.3s ease-in-out; }
      .job-listings .location {
        display: inline-block;
-       color: #9a9a9a;
+       color: #787676;
        line-height: 22px;
        margin: 15px 0; }
        .job-listings .location i {
-         color: #26ae61; }
+         color: #787676; }
      .job-listings .btn-full-time {
        line-height: 50px;
        font-size: 14px;
        text-transform: uppercase; }
      .job-listings .btn-apply {
-       color: #26ae61;
+       color: #787676;
        text-transform: uppercase;
        line-height: 25px;
-       border: 2px solid #26ae61;
+       border: 2px solid #000000;
        padding: 7px 18px;
        border-radius: 30px;
        -webkit-transition: all .4s ease;
@@ -1548,7 +1514,7 @@
        transition: all .4s ease; }
        .job-listings .btn-apply:hover {
          color: #fff;
-         background: #26ae61; }
+         background: #787676; }
    
    .job-listings:hover {
      background: #ffffff;
@@ -1669,7 +1635,7 @@
            .testimonial-item .content-inner .author-info h2 a {
              color: #484848; }
              .testimonial-item .content-inner .author-info h2 a:hover {
-               color: #26ae61; }
+               color: #787676; }
    
    .owl-carousel .owl-item img {
      display: inline-block;
@@ -1696,144 +1662,9 @@
        -webkit-transition: all 0.4s ease-in-out;
        -o-transition: all 0.4s ease-in-out; }
        .owl-dots span:hover {
-         background: #26ae61; }
+         background: #787676; }
      .owl-dots .active span {
-       background: #26ae61 !important; }
-   
-   /* ==========================================================================
-   Pricing Table
-   ========================================================================== */
-   .pricing-table {
-     padding: 30px;
-     text-align: center;
-     border-radius: 4px;
-     background: #fff;
-     box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
-     .pricing-table .icon {
-       margin-bottom: 10px; }
-       .pricing-table .icon i {
-         font-size: 42px;
-         color: #26ae61; }
-     .pricing-table .pricing-details h2 {
-       font-size: 20px;
-       color: #333333;
-       font-weight: 500;
-       padding: 15px 0;
-       margin-bottom: 0; }
-     .pricing-table .pricing-details ul li {
-       color: #9a9a9a;
-       padding: 7px;
-       font-size: 14px; }
-       .pricing-table .pricing-details ul li strong {
-         color: #333333; }
-     .pricing-table .price {
-       color: #333333;
-       font-size: 42px;
-       padding: 20px;
-       font-weight: 500; }
-       .pricing-table .price span {
-         font-size: 16px;
-         line-height: 27px;
-         font-weight: 400; }
-   
-   .pricing-table:hover .btn-border,
-   .pricing-active .btn-border {
-     background: #26ae61;
-     color: #fff;
-     border-color: rgba(255, 255, 255, 0.2); }
-   .pricing-table:hover .btn-border:hover::before,
-   .pricing-active .btn-border:hover::before {
-     opacity: 0;
-     transform: scale(0.5, 0.5); }
-   
-   .border-color-defult {
-     border-top: 4px solid #26ae61; }
-   
-   .border-color-red {
-     border-top: 4px solid #ff6046; }
-   
-   .border-color-green {
-     border-top: 4px solid #426eff; }
-   
-   .head-faq {
-     margin-bottom: 20px; }
-   
-   .panel-group .panel {
-     margin-bottom: 24px;
-     box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
-   
-   .panel-default {
-     border-radius: 0px;
-     border: none; }
-     .panel-default .panel-heading {
-       padding: 0px 20px;
-       outline: none;
-       border-radius: 4px;
-       background: #26ae61 !important;
-       border: 1px solid #26ae61;
-       width: 100%;
-       box-shadow: none; }
-       .panel-default .panel-heading .panel-title {
-         margin-top: 0px;
-         margin-bottom: 0px;
-         font-size: 16px;
-         color: inherit; }
-       .panel-default .panel-heading a {
-         font-size: 14px;
-         font-weight: 400;
-         padding: 15px 35px 15px 0px;
-         display: inline-block;
-         width: 100%;
-         color: #fff;
-         position: relative;
-         text-decoration: none; }
-       .panel-default .panel-heading a:after {
-         font-family: "LineIcons";
-         content: "\e93a";
-         position: absolute;
-         right: 15px;
-         color: #fff;
-         font-size: 14px;
-         font-weight: 300;
-         top: 50%;
-         line-height: 1;
-         margin-top: -7px;
-         transform: rotate(180deg);
-         transition: all 0.3s linear; }
-       .panel-default .panel-heading .collapsed:after {
-         transform: rotate(0deg); }
-     .panel-default .panel-collapse .panel-body {
-       padding: 20px;
-       background-color: #fff;
-       border: 1px solid #fff; }
-   
-   /* ==========================================================================
-    Policy Page Style
-    ========================================================================== */
-   .policy .post-box {
-     border-radius: 4px;
-     background: #fff;
-     box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
-     .policy .post-box .text-box {
-       width: 100%;
-       padding: 30px; }
-       .policy .post-box .text-box h2 {
-         line-height: 26px;
-         font-size: 26px;
-         margin: 0 0 18px 0; }
-       .policy .post-box .text-box h4 {
-         color: #999;
-         font-size: 16px;
-         margin: 15px 0px 15px;
-         font-weight: 500; }
-     .policy .post-box ul {
-       padding: 0 0 20px 20px;
-       margin: 0; }
-       .policy .post-box ul li {
-         padding: 0;
-         display: block;
-         overflow: hidden;
-         color: #888; }
+       background: #787676 !important; }
    
    .inner-box {
      padding: 30px;
@@ -1914,7 +1745,7 @@
          .job-list .job-tag .meta-tag span a {
            color: #999; }
            .job-list .job-tag .meta-tag span a:hover {
-             color: #26ae61; }
+             color: #787676; }
          .job-list .job-tag .meta-tag span i {
            margin-right: 5px; }
        .job-list .job-tag .icon {
@@ -1958,7 +1789,7 @@
        float: right;
        width: 20px;
        height: 20px;
-       background: #26ae61;
+       background: #787676;
        text-align: center;
        border-radius: 50px;
        color: #fff;
@@ -2074,7 +1905,7 @@
      background: #f1f1f1;
      margin-bottom: 20px; }
      .post-header a {
-       color: #26ae61; }
+       color: #787676; }
    
    .add-post-btn {
      width: 100%;
@@ -2105,77 +1936,7 @@
        border-radius: 50px;
        display: inline-block;
        height: 32px; }
-   
-   /* ==========================================================================
-      Manager Resumes Pages Style
-      ========================================================================== */
-   .manager-resumes-item {
-     box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24);
-     margin: 15px 0; }
-     .manager-resumes-item .item-body .content {
-       padding: 15px 30px; }
-     .manager-resumes-item .item-body .resume-skills {
-       display: inline-block;
-       width: 100%;
-       margin-top: 10px;
-       padding: 15px 30px;
-       border-top: 1px solid #f1f1f1; }
-     .manager-resumes-item .item-body .tag-list span {
-       background-color: #f1f1f1;
-       color: #9a9a9a;
-       padding: 4px 8px;
-       margin-right: 8px;
-       font-size: 12px;
-       border-radius: 4px;
-       line-height: 20px;
-       white-space: nowrap;
-       display: inline-block; }
-     .manager-resumes-item .manager-content {
-       padding: 20px 30px;
-       background: #f2f7fb;
-       display: inline-block;
-       width: 100%; }
-       .manager-resumes-item .manager-content .resume-thumb {
-         max-width: 64px;
-         width: auto;
-         margin-right: 30px;
-         border-radius: 50%;
-         float: left; }
-       .manager-resumes-item .manager-content .manager-info .manager-name {
-         float: left; }
-         .manager-resumes-item .manager-content .manager-info .manager-name h4 {
-           font-size: 18px;
-           line-height: 30px; }
-         .manager-resumes-item .manager-content .manager-info .manager-name h5 {
-           font-size: 15px;
-           margin-top: 5px;
-           font-weight: 400;
-           color: #9a9a9a; }
-       .manager-resumes-item .manager-content .manager-info .manager-meta {
-         float: right;
-         text-align: right; }
-         .manager-resumes-item .manager-content .manager-info .manager-meta span {
-           display: block;
-           color: #9a9a9a;
-           font-size: 15px;
-           line-height: 30px; }
-     .manager-resumes-item .update-date {
-       padding: 5px 30px;
-       display: inline-block;
-       width: 100%; }
-       .manager-resumes-item .update-date .status {
-         float: left; }
-       .manager-resumes-item .update-date .action-btn {
-         float: right; }
-     .manager-resumes-item .btn-xs {
-       padding: 4px 17px;
-       font-size: 12px; }
-     .manager-resumes-item .btn-gray {
-       color: #818a91; }
-       .manager-resumes-item .btn-gray:hover {
-         color: #26ae61; }
-     .manager-resumes-item .btn-danger {
-       background-color: #ef4d42 !important; }
+
    
    /* ==========================================================================
       Notifications Page Style
@@ -2262,7 +2023,7 @@
        .all-categories ul li a {
          color: #9a9a9a; }
          .all-categories ul li a:hover {
-           color: #26ae61; }
+           color: #787676; }
    
    .custom-file-label:focus {
      box-shadow: none; }
@@ -2270,14 +2031,14 @@
    .custom-file-label::after {
      padding: 7px 25px;
      color: #fff;
-     background-color: #26ae61;
+     background-color: #787676;
      border-left: none;
      border-top-right-radius: 30px;
      border-bottom-right-radius: 30px; }
    
    .job-detail .content-area {
      padding: 15px 20px;
-     box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24); }
+     box-shadow: 0px 0px 14px rgba(248, 248, 248, 18); }
      .job-detail .content-area h4 {
        font-size: 30px;
        font-weight: 500;
@@ -2326,7 +2087,7 @@
          height: 100%;
          display: block; }
      .sideber .share-job #subscribe-form .form-group .form-control {
-       border: 1px solid #eaeaea; }
+       border: 1px solid #f8f8f8; }
      .sideber .share-job .meta-tag {
        margin-top: 20px; }
        .sideber .share-job .meta-tag .meta-part {
@@ -2528,8 +2289,8 @@
          width: 48px;
          line-height: 48px;
          height: 48px;
-         color: #26ae61;
-         border: 2px solid #26ae61;
+         color: #787676;
+         border: 2px solid #787676;
          font-size: 24px;
          display: inline-block;
          background: transparent;
@@ -2540,7 +2301,7 @@
          transition: all 0.2s linear; }
          #carousel-area .carousel-control-next i:hover,
          #carousel-area .carousel-control-prev i:hover {
-           background: #26ae61;
+           background: #787676;
            color: #fff; }
      #carousel-area .carousel-agency .carousel-caption h2 {
        font-size: 42px;
@@ -2564,7 +2325,7 @@
    
    #carousel-area .carousel-indicators li:hover,
    #carousel-area .carousel-indicators li.active {
-     background: #26ae61; }
+     background: #787676; }
    
    .carousel-control-prev,
    .carousel-control-next {
@@ -2603,32 +2364,8 @@
    .right {
      cursor: pointer;
      font-size: 30px;
-     color: #26ae61; }
-   
-   /* ==========================================================================
-      Blog 
-      ========================================================================== */
-   #blog .blog-item-wrapper {
-     background: #fff; }
-     #blog .blog-item-wrapper .blog-item-img {
-       position: relative; }
-       #blog .blog-item-wrapper .blog-item-img img {
-         width: 100%; }
-     #blog .blog-item-wrapper .blog-item-text {
-       padding: 15px 0; }
-       #blog .blog-item-wrapper .blog-item-text h3 {
-         font-size: 16px;
-         line-height: 26px;
-         font-weight: 500;
-         margin-bottom: 10px; }
-         #blog .blog-item-wrapper .blog-item-text h3 a {
-           color: #000000; }
-           #blog .blog-item-wrapper .blog-item-text h3 a:hover {
-             color: #26ae61; }
-     #blog .blog-item-wrapper .readmore {
-       margin-top: 15px; }
-       #blog .blog-item-wrapper .readmore i {
-         vertical-align: middle; }
+     color: #787676; }
+  
    
    #content {
      padding: 60px 0; }
@@ -2691,7 +2428,7 @@
            .blog-post .post-content .meta .meta-part a {
              color: #999; }
              .blog-post .post-content .meta .meta-part a:hover {
-               color: #26ae61; }
+               color: #787676; }
            .blog-post .post-content .meta .meta-part i {
              margin-right: 5px; }
        .blog-post .post-content p {
@@ -2830,7 +2567,7 @@
    blockquote {
      border-left: none;
      padding: 30px;
-     background: #26ae61; }
+     background: #787676; }
      blockquote .quote-text {
        font-size: 20px;
        font-weight: 400;
@@ -2878,7 +2615,7 @@
      padding-left: 85px; }
    
    .reply-link {
-     color: #26ae61;
+     color: #787676;
      border-radius: 0px;
      font-size: 14px;
      -webkit-transition: all 0.4s ease;
@@ -2947,7 +2684,7 @@
 .review-group input::value {
        color: #787676;
        font-weight: 400;
-background: red;
+background: #f8f8f8;
     border: 1px solid #000000;	   }
 }
 	.review-control {
@@ -2976,7 +2713,7 @@ background: red;
      transition: all 0.3s; }
    
    .form-control:focus {
-     border: 1px solid #26ae61;
+     border: 2px solid #f8f8f8;
      outline: none;
      box-shadow: none; }
    
@@ -3017,7 +2754,7 @@ background: red;
        .contact-info .single-contact p a {
          color: #9a9a9a; }
      .contact-info .contact-icon {
-       background: #26ae61;
+       background: #787676;
        color: #fff;
        border-radius: 50%;
        font-size: 20px;
@@ -3082,14 +2819,14 @@ background: red;
      width: 100%;
      height: 25px; }
      .page-login-form .form-links li a {
-       color: #9a9a9a; }
+       color: #f8f8f8; }
      .page-login-form .form-links li a:hover {
-       color: #26ae61; }
+       color: #787676; }
    
    .input-icon {
      position: relative; }
      .input-icon i {
-       color: #26ae61;
+       color: #f8f8f8;
        padding-right: 10px;
        font-size: 14px;
        position: absolute;
@@ -3181,7 +2918,7 @@ background: red;
        float: left; }
        #subscribe .sub-item-box .icon-box i {
          font-size: 30px;
-         color: #26ae61; }
+         color: #787676; }
      #subscribe .sub-item-box .text-box {
        margin-left: 60px; }
        #subscribe .sub-item-box .text-box h4 {
@@ -3215,11 +2952,11 @@ background: red;
        color: #dd4b39; }
    
    input[type="checkbox"] {
-     background: #3d404e;
-     border: #7f83a2 1px solid; }
+     background: #787676;
+     border: #f8f8f8 1px solid; }
    
    .form-check input[type=checkbox].form-check-input {
-     background: #26ae61; }
+     background: #787676; }
    
    /* ==========================================================================
       Footer Style
@@ -3260,7 +2997,7 @@ background: red;
          color: #8a99b3;
          font-size: 14px; }
          footer .menu li a:hover {
-           color: #26ae61; }
+           color: #787676; }
        footer .menu li .small-title {
          color: #fff;
          font-weight: 500; }
@@ -3281,7 +3018,7 @@ background: red;
          .contact-footer li span a {
            color: #BFBFBF; }
            .contact-footer li span a:hover {
-             color: #26ae61; }
+             color: #787676; }
    
    .contact-list li {
      padding: 5px 0;
@@ -3306,7 +3043,7 @@ background: red;
          border-radius: 5px;
          background: transparent;
          color: #fff;
-         border: 1px solid #536688;
+         border: 1px solid #f8f8f8;
          padding: 15px;
          height: 40px;
          line-height: 40px; }
@@ -3336,7 +3073,7 @@ background: red;
        display: inline-block;
        margin-right: 12px; }
        .footer-social li a {
-         background-color: #26ae61;
+         background-color: #787676;
          border-radius: 30px;
          color: #fff;
          height: 32px;
@@ -3357,7 +3094,7 @@ background: red;
          background-color: #dd4b39; }
    
    #copyright {
-     background-color: #26ae61;
+     background-color: #787676;
      padding: 20px 0 10px;
      color: #fff; }
      #copyright p {
@@ -3394,7 +3131,7 @@ background: red;
        float: left; }
        #counter .counter-box .icon i {
          font-size: 48px;
-         color: #26ae61; }
+         color: #787676; }
      #counter .counter-box h3 {
        color: #333;
        font-size: 26px;

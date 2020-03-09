@@ -5846,6 +5846,16 @@ a.close.disabled {
     content: none
 }
 
+.boxx {
+    width: 21rem;
+    height: 4rem;
+}
+
+.boxxx {
+    width: 14rem;
+    height: 3rem;
+}
+
 .modal-content {
     position: relative;
     display: flex;

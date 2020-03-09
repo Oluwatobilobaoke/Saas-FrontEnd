@@ -12,11 +12,11 @@
   <title>SAAS</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -29,8 +29,8 @@
     <ul class="navbar-nav bg-gradient-light sidebar sidebar-light accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-          <img src="../SaaS/assets/img/saas.png" alt="">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
+          <img src="../img/saas.png" alt="">
       </a>
 
       <!-- Divider -->
@@ -69,9 +69,9 @@
 
       <!-- Nav Item - Applications -->
       <li class="nav-item">
-        <a class="nav-link" href="applications.html">
+        <a class="nav-link" href="jobs-posted.html">
           <i class="fas fa-fw fa-clipboard-list"></i>
-          <span>Applications</span></a>
+          <span>Jobs Posted</span></a>
       </li>
 
       <!-- Divider -->
@@ -79,9 +79,9 @@
 
       <!-- Nav Item - Past Jobs -->
       <li class="nav-item">
-        <a class="nav-link" href="past-jobs.html">
+        <a class="nav-link" href="past-employees.html">
           <i class="fas fa-fw fa-users"></i>
-          <span>Past Jobs</span></a>
+          <span>Past Employees</span></a>
       </li>
 
       
@@ -137,8 +137,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle mr-2" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Soliudeen Ogunsola</span>
+                <img class="img-profile rounded-circle" src="https://cdn4.iconfinder.com/data/icons/social-icon-4/842/facebook-512.png">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Facebook</span>
                 
               </a>
               <!-- Dropdown - User Information -->
@@ -166,8 +166,9 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h2 mb-0 font-weight-bolder text-dark">Edit Profile</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-dark shadow-sm"><i class="text-white-50"></i> Save Changes</a>
-          </div>
+            <form>
+              <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-dark shadow-sm" type="submit"><i class="text-white-50"></i> Save Changes</a>
+            </div>
 
           <!-- Content Row -->
           <div class="row">
@@ -177,42 +178,50 @@
               <div class="sideber">
                    <div class="imgprofile">
                      <div class="imgprofile-full">
-                       <img src="./img/Rectangle 9.png"></img>
-                       <input type="file">
+                       <img src="../img/facebookicon.png"></img>
+                       <input type="file" class="form-control">
                      </div>
                    </div>
                    <br>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Soliudeen Ogunsola</div>
-                      <div class="p text-md font-weight-normal text-body mb-3">I'm a Product Designer working on Solution Challenge</div>
-                      <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-light shadow-sm"><i class="text-dark"></i> Download CV</a>
+                    <div class="form-group">
+                      <label class="h1 text-lg font-weight-bolder text-dark mb-1">Name</label>
+                      <input type="text" class="form-control" placeholder="Facebook">
+                    </div>
+                    <div class="form-group">
+                      <label class="h1 text-lg font-weight-bolder text-dark control-label">Bio</label>
+                      <input type="text" class="form-control boxx" placeholder="Facebook, Inc. is an American social media and technology company based in Menlo Park, California.">
+                    </div>
               </div>
             </div>
    
             <!-- Experience, Skills, Location, Avaliability, Hourly Rate -->
             <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Experience</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Product Designer at Google. Designing Awesome products for the next billion users</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Skills</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Product Design, Ui Design, UX Design, Frontend Development</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Location</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Abeokuta, Nigeria</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Avaliability</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Freelance</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Hourly Rate</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">N10000/hr</div>
+                    <div class="form-group">
+                      <label class="h1 text-lg font-weight-bolder text-dark control-label">Address</label>
+                      <input type="text" class="form-control" placeholder="1 Hacker Way, Menlo Park, CA 94025 within the Silicon Valley.">
+                    </div>
+                    <div class="form-group">
+                      <label class="h1 text-lg font-weight-bolder text-dark control-label">Category</label>
+                      <input type="text" class="form-control" placeholder="Product Design, Ui Design, UX Design, Frontend Development">
+                    </div>
             </div>
 
             <!-- Phone Number,Department, Matric Number, Disclaimer -->
             <div class="col-xl-4 col-md-6 mb-4">
-              <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Phone Number</div>
-              <div class="p text-md font-weight-normal text-body mb-3">+234 08104421844</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">Department</div>
-              <div class="p text-md font-weight-normal text-body mb-3">Mathematics</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">Matric Number</div>
-              <div class="p text-md font-weight-normal text-body mb-3">20387631</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">*Disclaimer</div>
-              <div class="p text-md font-weight-normal text-body mb-3">Matric number and Department are only collected for security reasons and they won't be displayed on their public profiles, neither will it be revealed to a potential employer.</div>
+              <div class="form-group">
+                <label class="h1 text-lg font-weight-bolder text-dark control-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+1-812-345-6789">
+              </div>
+              <div class="form-group">
+                <label class="h1 text-lg font-weight-bolder text-dark control-label">Email</label>
+                <input type="text" class="form-control" placeholder="jobs@facebook.com">
+              </div>
+              <div class="form-group">
+                <label class="h1 text-lg font-weight-bolder text-dark control-label">Password</label>
+                <input type="text" class="form-control" placeholder="***************">
+              </div>
             </div>
+          </form>
         <!-- /.container-fluid -->
 
       </div>
