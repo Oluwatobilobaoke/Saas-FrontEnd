@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <script type="text/javascript" src="./assets/js/homepage.js"></script>
+        <script type="text/javascript" src="./assets/js/signup-validation.js"></script>
     </head>
 
     <body>
@@ -84,7 +85,7 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h5 class="card-title text-center">Create an Account</h5>
-                  <form class="form-signin">
+                  <form class="form-signin" name="signUpForm" action="Dashboard/Student/index.html" method="POST" onsubmit="return validateForm()" novalidate>
                     <div class="third-party-signups">
                       <a class="button google-branded-button j-third-party t-google-signup" href="#">
                          <span class="google-branded-button-icon">
@@ -104,27 +105,31 @@
                     <!-- This is the account Creation Section for Students -->
                     <section id="studentAccountCreationSection">
                         <div class="form-label-group">
-                            <input type="name" id="inputName" class="form-control" placeholder="Full Name" required>
+                            <input type="name" class="form-control" id="inputName" placeholder="Full Name" required>
                             <label for="inputName">Full Name</label>
+                            <div class="error" id="inputNameErr"></div>
                           </div>
 
                           <div class="form-label-group">
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                             <label for="inputEmail">Email address</label>
+                            <div class="error" id="inputEmailErr"></div>
                           </div>
 
                           <div class="form-label-group">
                             <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" required autofocus>
                             <label for="inputPhone">Phone Number</label>
+                            <div class="error" id="inputPhoneErr"></div>
                           </div>
 
                           <div class="form-label-group">
                             <input type="text" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
                             <label for="inputAddress">Address</label>
+                            <div class="error" id="inputAddressErr"></div>
                           </div>
 
                           <div class="form-label-group">
-                            <select name="" class="form-control">
+                            <select name="availability" class="form-control">
                                 <option value="">Availability</option>
                                 <option>Freelance</option>
                                 <option>Full Time</option>
@@ -132,21 +137,25 @@
                                 <option>Week Days</option>
                                 <option>Week End</option>
                               </select>
+                              <div class="error" id="availibilityErr"></div>
                           </div>
 
                           <div class="form-label-group">
-                            <input type="text" id="inputRate" class="form-control" placeholder="Rate/hr" required autofocus>
+                            <input type="number" id="inputRate" class="form-control" placeholder="Rate/hr" required autofocus>
                             <label for="inputRate">Rate/Hr</label>
+                            <div class="error" id="inputRateErr"></div>
                           </div>
 
                         <div class="form-label-group">
                           <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                           <label for="inputPassword">Password</label>
+                          <div class="error" id="inputPasswordErr"></div>
                         </div>
 
                         <div class="form-label-group">
-                          <input type="password" id="inputPassword" class="form-control" placeholder="Retype Password" required>
-                          <label for="inputPassword">Retype Password</label>
+                          <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required>
+                          <label for="inputConfirmPassword">Confirm Password</label>
+                          <div class="error" id="inputConfirmPasswordErr"></div>
                         </div>
 
                     </section>
@@ -155,44 +164,52 @@
                         <div class="form-label-group">
                           <input type="name" id="inputName" class="form-control" placeholder="Organisational Name" required>
                           <label for="inputName">Organisation Name</label>
+                          <div class="error" id="inputNameErr"></div>
                         </div>
 
                         <div class="form-label-group">
                           <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                           <label for="inputEmail">Email address</label>
+                          <div class="error" id="inputEmailErr"></div>
                         </div>
 
                         <div class="form-label-group">
                           <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" required autofocus>
                           <label for="inputPhone">Phone Number</label>
+                          <div class="error" id="inputPhoneErr"></div>
                         </div>
 
                         <div class="form-label-group">
                           <input type="text" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
                           <label for="inputAddress">Address</label>
+                          <div class="error" id="inputAddressErr"></div>
                         </div>
 
                         <div class="form-label-group">
                           <input type="text" id="inputDescription" class="form-control" placeholder="Description" required autofocus>
                           <label for="inputDescription">Description</label>
+                          <div class="error" id="inputDescriptionErr"></div>
                         </div>
 
                         <div class="form-label-group">
                           <select name="" class="form-control" id="companyCategories">
                               <option value="categories" data-id=0>Categories</option>
                             </select>
+                            <div class="error" id="inputCompanyCategoriesErr"></div>
                         </div>
 
 
                       <div class="form-label-group">
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Password</label>
+                        <p class="error"></p>
                       </div>
 
                       <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Retype Password" required>
-                        <label for="inputPassword">Retype Password</label>
+                        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required>
+                        <label for="inputConfirmPassword">Confirm Password</label>
                       </div>
+                      <p class="error"></p>
                     </section>
 
                     <button class="btn btn-lg btn-facebook btn-block text-uppercase" id="createAccountBtn" type="submit" disabled>Sign Up</button>
@@ -208,13 +225,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
       <script src="assets/js/jquery-min.js"></script>
-      <script src="assets/js/popper.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/owl.carousel.min.js"></script>
       <script src="assets/js/jquery.slicknav.js"></script>
       <script src="assets/js/jquery.counterup.min.js"></script>
       <script src="assets/js/waypoints.min.js"></script>
       <script src="assets/js/form-validator.min.js"></script>
-      <script src="assets/js/contact-form-script.js"></script>
       <script src="assets/js/main.js"></script>
 </html>
