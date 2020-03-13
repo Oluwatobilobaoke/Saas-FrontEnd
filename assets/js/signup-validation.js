@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(res.success){
                     let datas = res.payload.data;
                     datas.forEach(data => {
-                        let categories = document.querySelector('#companyCategories');
+                        let categories = document.querySelector('#inputOrgCategories');
                         categories.innerHTML += `<option value="${data.name}" data-id="${data.id}">${data.name}</option>`
                     })
                 }
@@ -56,140 +56,109 @@ function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-function validateForm() {
-    let inputName = document.getElementById("inputName");
-    let inputEmail = document.getElementById("inputEmail");
-    let inputPhone = document.getElementById("inputPhone");
-    let inputAddress = document.getElementById("inputAddress");
-    let availability = document.signUpForm.availability.value;
-    let inputRate = document.getElementById("inputRate");
-    let inputPassword = document.getElementById("inputPassword");
-    let inputConfirmPassword = document.getElementById("inputConfirmPassword");
-    let inputDescription = document.getElementById("inputDescription");
-    let inputCompanyCategories = document.getElementById("companyCategories");
 
+// This is a single validator Object used to valdate both the students and companies data
+function SaasValidator(){
+    this.checkEmpty = (arr) => {
+        // This method takes in an array if values and makes checks if any of them is an empty string.
+        arr.forEach(data => {
+            if (data[0] === "") {
+                document.getElementById(data[1]).textContent = `${data[2]} is required`;
+            }
+            else{
+                document.getElementById(data[1]).textContent = "";   
+            }
+        })
+        // check if all the element has been filled
+        let result = arr.every(val => val[0] !== "");
+        return result;
+    }
 
-    // Defining error variables with a default value
-    let inputNameErr = inputEmailErr = inputPhoneErr = inputAddressErr = availabilityErr = inputRateErr = inputDescriptionErr = inputCompanyCategoriesErr = inputPasswordErr = inputConfirmPasswordErr = true;
+    this.validatePassword = (pass) => {
+        // This function makes sure an inputted password is in it's right format
+        if(pass[0].length < 8){
+            document.getElementById(pass[1]).textContent = "Password must be at least 8 characters long";
+            return false;
+        }
 
-    // Validate Name
-    if(inputName == "") {
-        printError("inputNameErr", "Please Enter your name");
-    } else {
-        let regex = /^[a-zA-Z\s]+$/;
-        if(regex.text(inputName) == false) {
-            printError("inputNameErr", "Please enter a valid name: must have alphabet characters only");
-        } else {
-            printError("inputNameErr", "");
-            inputNameErr = false;
+        else if(pass[0].match(/[A-Z]/g) === null){
+            document.getElementById(pass[1]).textContent = "Password must contain at least an uppercase letter";
+            return false;
+        }
+
+        else if(pass[0].match(/[0-9]/g) === null){
+            document.getElementById(pass[1]).textContent = "Password must contain at least a number";
+            return false;
+        }
+
+        else if(pass[0] !== document.getElementById(pass[2]).value){
+            document.getElementById(pass[2]+'Err').textContent = "Passwords must match";
+            return false;
+        }
+        else{
+            document.getElementById(pass[2]+'Err').textContent = "";
+            return true;
         }
     }
 
-    // Validate Email Address
-    if(inputEmail == "") {
-        printError("inputEmailErr", "Please enter your Email Address");
-    } else {
-        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if(regex.test(inputEmail) === false) {
-            printError("inputEmailErr", "Please enter a valid Email Address");
-        } else {
-            printError("inputEmailErr", "");
-            inputEmailErr = false;
+    this.validateAll = (arr) => {
+        // Make sure all other validators here run accordingly
+        if(this.checkEmpty(arr)){
+            // If no field is left empty, validate the password
+            return this.validatePassword(arr[6])
+        }
+        else{
+            return false;
         }
     }
+}
 
-    // Validate Phone Number
-    if(inputPhone == "") {
-        printError("inputPhoneErr", "Please enter your Phone Number");
-    } else {
-        let regex = /^[1-9]\d{9}$/;
-        if(regex.test(inputPhone) === false) {
-            printError("inputPhoneErr", "Please enter a valid 10 digit mobile number");
-        } else {
-            printError("inputPhoneErr", "");
-            inputPhoneErr = false;
-        }
+// Validate the data of students registration
+function validateStudents(){
+    let inputAndErrorDetails = [['inputStudentName', 'inputStudentNameErr', 'Full name'], 
+    ['inputStudentEmail', 'inputStudentEmailErr', 'Email'], ['inputStudentPhone', 'inputStudentPhoneErr', 'Phone number'], 
+    ['inputStudentAddress', 'inputStudentAddressErr', 'Address'], ['inputStudentAvailability', 'availibilityStudentErr', 'Availability'], 
+    ['inputStudentRate', 'inputStudentRateErr', 'Hourly Rate'], ['inputStudentPassword', 'inputStudentPasswordErr', 'inputStudentConfirmPassword']];
+    // The above array is an array of te ID's of the student data input field, it's corresponding error fields and field name
+    inputAndErrorDetails = inputAndErrorDetails.map(data => {
+        // I'm mapping through the array so I can get on the value in every Input field and the ID of it's
+        // corresponding error and field name in a single Array
+        return [document.getElementById(data[0]).value, data[1], data[2]];
+    })
+    // Check if all the fields have been filled out and display error messages fr the ones that aren't filled
+    let Validator = new SaasValidator();
+    let validateInputs = Validator.validateAll(inputAndErrorDetails);
+    console.log(validateInputs);
+}
+
+// Validate the data of students registration
+function validateCompanies(){
+    let inputAndErrorDetails = [['inputOrgName', 'inputOrgNameErr', 'Company name'], 
+    ['inputOrgEmail', 'inputOrgEmailErr', 'Email'], ['inputOrgPhone', 'inputOrgPhoneErr', 'Phone number'], 
+    ['inputOrgAddress', 'inputOrgAddressErr', 'Address'], ['inputOrgDescription', 'inputOrgDescriptionErr', 'Description'], 
+    ['inputOrgCategories', 'inputOrgCategoriesErr', 'Category'], ['inputOrgPassword', 'inputOrgPasswordErr', 'inputOrgConfirmPassword']];
+     // The above array is an array of te ID's of the student data input field, it's corresponding error fields and field name
+    inputAndErrorDetails = inputAndErrorDetails.map(data => {
+        // I'm mapping through the array so I can get on the value in every Input field and the ID of it's
+        // corresponding error and field name in a single Array
+        return [document.getElementById(data[0]).value, data[1], data[2]];
+    })
+    console.log(inputAndErrorDetails);
+    // Check if all the fields have been filled out and display error messages fr the ones that aren't filled
+    let Validator = new SaasValidator();
+    let validateInputs = Validator.validateAll(inputAndErrorDetails);
+    console.log(validateInputs);
+}
+
+
+function createAccount(){
+    let selectUserCategory = document.querySelector('#selectUserCategory');
+    if(selectUserCategory.value === 'student'){
+        // Validate students data first, then create account.
+        validateStudents();
     }
-
-    // Validate Address
-    if (inputAddress == "") {
-        printError("inputAddressErr", "Please enter your Address");
-    } else {
-        printError("inputAddressErr", "");
-        inputAddressErr = false;
+    else if(selectUserCategory.value === 'organization'){
+        // Validate orgnizations data first, then create account.
+        validateCompanies();
     }
-
-    // Validate Availbility
-    if(availability == "Availability") {
-        printError("availibilityErr", "Please select your availability");
-    } else {
-        printError("availibilityErr", "");
-        availibilityErr = false;
-    }
-
-    // Validate InputRate
-    if (inputRate == "") {
-        printError("inputRateErr", "Please enter your rate");
-    } else {
-        printError("inputRateErr", "");
-        inputRateErr = false;
-    }
-
-    // Validate Password
-    if (inputPassword == "") {
-        printError("inputPasswordErr", "please enter your password");
-    } else {
-        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})$/;
-        if (regex.text(inputPassword) === false) {
-            printError("inputPasswordErr", "Pasword must contain: at least 1 lowercase letter, at least 1 uppercase letter, at least a number,  at least one special character, eight characters or longer");
-        } else {
-            printError("inputPasswordErr", "");
-            inputPasswordErr = false;
-        }
-    }
-
-    // Validate Confirm Password
-    if (inputConfirmPassword !== inputPassword) {
-        printError("inputConfirmPasswordErr", "Password does not Match");
-    } else {
-        printError("inputConfirmPasswordErr", "");
-        inputConfirmPasswordErr = false;
-    }
-
-    // Validate Company Description
-    if (inputDescription == "") {
-        printError("inputDescriptionErr", "Please enter your Company Description");
-    } else {
-        printError("inputDescriptionErr", "");
-        inputDescriptionErr = false;
-    }
-
-    // Validate Company Categories
-    if(inputCompanyCategories == "Categories") {
-        printError("inputCompanyCategoriesErr", "Please select your Company Category");
-    } else {
-        printError("inputCompanyCategoriesErr", "");
-        inputCompanyCategoriesErr = false;
-    }
-
-    // Form Won't Submit if there is any Errors
-    if ((inputNameErr || inputEmailErr || inputPhoneErr || inputAddressErr || availibilityErr || inputRateErr || inputPasswordErr || inputConfirmPasswordErr || inputConfirmPasswordErr || inputDescriptionErr || inputCompanyCategoriesErr ) == true) {
-        return false;
-    } else {
-        // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-                          "Name: " + inputName + "\n" +
-                          "Email Address: " + inputEmail + "\n" +
-                          "Address: " + inputAddress + "\n" +
-                          "Phone Number: " + inputPhone + "\n" +
-                          "Availability: " + availability + "\n" +
-                          "Rate/Hr: " + inputRate + "\n" +
-                          "Description: " + inputDescription + "\n" +
-                          "Categories: " + inputCompanyCategories + "\n";
-                          "Password: " + inputPassword + "\n" +
-                          "Confirm Password: " + inputConfirmPassword + "\n" +
-        // Display input data in a dialog box before submitting the form
-        alert(dataPreview);
-    }
-
-};
+}
