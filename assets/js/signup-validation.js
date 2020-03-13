@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(res.success){
                     let datas = res.payload.data;
                     datas.forEach(data => {
-                        let categories = document.querySelector('#companyCategories');
+                        let categories = document.querySelector('#inputOrgCategories');
                         categories.innerHTML += `<option value="${data.name}" data-id="${data.id}">${data.name}</option>`
                     })
                 }
@@ -129,4 +129,36 @@ function validateStudents(){
     let Validator = new SaasValidator();
     let validateInputs = Validator.validateAll(inputAndErrorDetails);
     console.log(validateInputs);
+}
+
+// Validate the data of students registration
+function validateCompanies(){
+    let inputAndErrorDetails = [['inputOrgName', 'inputOrgNameErr', 'Company name'], 
+    ['inputOrgEmail', 'inputOrgEmailErr', 'Email'], ['inputOrgPhone', 'inputOrgPhoneErr', 'Phone number'], 
+    ['inputOrgAddress', 'inputOrgAddressErr', 'Address'], ['inputOrgDescription', 'inputOrgDescriptionErr', 'Description'], 
+    ['inputOrgCategories', 'inputOrgCategoriesErr', 'Category'], ['inputOrgPassword', 'inputOrgPasswordErr', 'inputOrgConfirmPassword']];
+     // The above array is an array of te ID's of the student data input field, it's corresponding error fields and field name
+    inputAndErrorDetails = inputAndErrorDetails.map(data => {
+        // I'm mapping through the array so I can get on the value in every Input field and the ID of it's
+        // corresponding error and field name in a single Array
+        return [document.getElementById(data[0]).value, data[1], data[2]];
+    })
+    console.log(inputAndErrorDetails);
+    // Check if all the fields have been filled out and display error messages fr the ones that aren't filled
+    let Validator = new SaasValidator();
+    let validateInputs = Validator.validateAll(inputAndErrorDetails);
+    console.log(validateInputs);
+}
+
+
+function createAccount(){
+    let selectUserCategory = document.querySelector('#selectUserCategory');
+    if(selectUserCategory.value === 'student'){
+        // Validate students data first, then create account.
+        validateStudents();
+    }
+    else if(selectUserCategory.value === 'organization'){
+        // Validate orgnizations data first, then create account.
+        validateCompanies();
+    }
 }

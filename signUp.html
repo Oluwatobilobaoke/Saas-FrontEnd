@@ -192,7 +192,7 @@
                         </div>
 
                         <div class="form-label-group">
-                          <select name="" class="form-control" id="companyOrgCategories">
+                          <select name="" class="form-control" id="inputOrgCategories">
                               <option value="categories" data-id=0>Categories</option>
                             </select>
                             <div class="error" id="inputOrgCategoriesErr"></div>
@@ -202,18 +202,17 @@
                       <div class="form-label-group">
                         <input type="password" id="inputOrgPassword" class="form-control" placeholder="Password" required>
                         <label for="inputOrgPassword">Password</label>
-                        <p class="error" id="inputOrgPasswordError"></p>
+                        <p class="error" id="inputOrgPasswordErr"></p>
                       </div>
 
                       <div class="form-label-group">
                         <input type="password" id="inputOrgConfirmPassword" class="form-control" placeholder="Confirm Password" required>
                         <label for="inputOrgConfirmPassword">Confirm Password</label>
                       </div>
-                      <p class="error" id="inputOrgConfirmPasswordError"></p>
+                      <p class="error" id="inputOrgConfirmPasswordErr"></p>
                     </section>
 
-                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" id="createAccountBtn" type="button" disabled>Sign Up</button>
-                    <input type="button" value="click" name="" onclick="validateStudents()">
+                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" id="createAccountBtn" type="button" onclick="createAccount()" disabled>Sign Up</button>
                     
                   </form>
                       <p class="text-center">Already have an Account ?<a href="./login.html"> Log In</a></p>
