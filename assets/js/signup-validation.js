@@ -1,3 +1,56 @@
+let url = "https://stuaas.herokuapp.com/api/v1/";
+
+// =================================================
+// | Let users select a category to register with  |
+// =================================================
+document.addEventListener("DOMContentLoaded", () => {
+    // Wait till all the DOM element is rendered;
+    let selectUserCategory = document.querySelector('#selectUserCategory');
+    selectUserCategory.addEventListener("change", () => {
+        // When the selected category is changed from what it was initially
+        let studentAccountCreationSection = document.querySelector("#studentAccountCreationSection");
+        let organizationAccountCreationSection = document.querySelector("#organizationAccountCreationSection");
+        let userCategorySelected = selectUserCategory.value; // The selected user category
+        console.log("The selected category is ====>> ", userCategorySelected)
+        let createAccountBtn = document.querySelector('#createAccountBtn');
+        if(userCategorySelected === 'organization'){
+            // When organization is selected, some data is loaded from the database and it takes some 
+            // time to load this data. All input fields wil be hidden till this is loaded and rendered.
+            studentAccountCreationSection.style.display = 'none';
+            organizationAccountCreationSection.style.display = 'none';
+            createAccountBtn.removeAttribute("disabled");
+            // Fetch the category for organizations 
+            fetch(`${url}organizations/categories`)
+            .then(res => res.json())
+            .then(res => {
+                studentAccountCreationSection.style.display = "none";
+                organizationAccountCreationSection.style.display = "block";
+                if(res.success){
+                    let datas = res.payload.data;
+                    datas.forEach(data => {
+                        let categories = document.querySelector('#companyCategories');
+                        categories.innerHTML += `<option value="${data.name}" data-id="${data.id}">${data.name}</option>`
+                    })
+                }
+            })
+            .catch(err => {
+                console.log("The error is => ", err);
+            })
+        }
+        else if(userCategorySelected === "0"){
+            createAccountBtn.setAttribute("disabled", '');
+            organizationAccountCreationSection.style.display = "none";
+            studentAccountCreationSection.style.display = "none";
+        }
+        else{
+            createAccountBtn.removeAttribute("disabled");
+            organizationAccountCreationSection.style.display = "none";
+            studentAccountCreationSection.style.display = "block";
+        }
+        console.log(userCategorySelected);
+    })
+});
+
 // Defining a function to display error message
 function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
