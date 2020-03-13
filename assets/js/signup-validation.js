@@ -118,7 +118,7 @@ function validateStudents(){
     let inputAndErrorDetails = [['inputStudentName', 'inputStudentNameErr', 'Full name'], 
     ['inputStudentEmail', 'inputStudentEmailErr', 'Email'], ['inputStudentPhone', 'inputStudentPhoneErr', 'Phone number'], 
     ['inputStudentAddress', 'inputStudentAddressErr', 'Address'], ['inputStudentAvailability', 'availibilityStudentErr', 'Availability'], 
-    ['inputStudentRate', 'inputStudentRateErr', 'Hourly Rate'], ['inputStudentPassword', 'inputStudentPasswordErr', 'inputStudentConfirmPassword']];
+    ['inputStudentRate', 'inputStudentRateErr', 'Hourly Rate'], ['inputStudentPassword', 'inputStudentPasswordErr', 'Password'], ['inputStudentConfirmPassword', 'inputStudentConfirmPasswordErr', 'Confirm Password']];
     // The above array is an array of te ID's of the student data input field, it's corresponding error fields and field name
     inputAndErrorDetails = inputAndErrorDetails.map(data => {
         // I'm mapping through the array so I can get on the value in every Input field and the ID of it's
@@ -136,7 +136,7 @@ function validateCompanies(){
     let inputAndErrorDetails = [['inputOrgName', 'inputOrgNameErr', 'Company name'], 
     ['inputOrgEmail', 'inputOrgEmailErr', 'Email'], ['inputOrgPhone', 'inputOrgPhoneErr', 'Phone number'], 
     ['inputOrgAddress', 'inputOrgAddressErr', 'Address'], ['inputOrgDescription', 'inputOrgDescriptionErr', 'Description'], 
-    ['inputOrgCategories', 'inputOrgCategoriesErr', 'Category'], ['inputOrgPassword', 'inputOrgPasswordErr', 'inputOrgConfirmPassword']];
+    ['inputOrgCategories', 'inputOrgCategoriesErr', 'Category'], ['inputOrgPassword', 'inputOrgPasswordErr', 'Password'], ['inputOrgConfirmPassword', 'inputOrgConfirmPasswordErr', 'Confirm Password']];
      // The above array is an array of te ID's of the student data input field, it's corresponding error fields and field name
     inputAndErrorDetails = inputAndErrorDetails.map(data => {
         // I'm mapping through the array so I can get on the value in every Input field and the ID of it's
@@ -162,3 +162,26 @@ function createAccount(){
         validateCompanies();
     }
 }
+
+// Form submission via FETCH
+
+document.getElementById("signUpForm").addEventListener("click", signUpForm);
+
+function signUpForm (event){
+    event.preventDefault();
+    // let inputStudentName
+
+    fetch(`${url}user/signup`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify()
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err))
+}
+
+
+
+   
