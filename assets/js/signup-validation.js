@@ -165,22 +165,22 @@ function createAccount(){
 
 // Form submission via FETCH
 
-document.getElementById("signUpForm").addEventListener("click", signUpForm);
+// document.getElementById("signUpForm").addEventListener("click", signUpForm);
 
-function signUpForm (event){
-    event.preventDefault();
-    // let inputStudentName
+// function signUpForm (event){
+//     event.preventDefault();
+//     // let inputStudentName
 
-    fetch(`${url}user/signup`, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify()
-    }).then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-}
+//     fetch(`${url}user/signup`, {
+//         method: "POST",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify()
+//     }).then((res) => res.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+// }
 
 
 
