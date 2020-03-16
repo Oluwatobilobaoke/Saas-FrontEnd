@@ -153,30 +153,37 @@ function validateCompanies(){
 
 function createAccount(){
     let selectUserCategory = document.querySelector('#selectUserCategory');
-    if(selectUserCategory.value === 'student'){
-        // Validate students data first, then create account.
-        validateStudents();
-    }
-    else if(selectUserCategory.value === 'organization'){
-        // Validate orgnizations data first, then create account.
-        validateCompanies();
-    }
+    let valid = false;
+        if(selectUserCategory.value === 'student'){
+            // Validate students data first, then create account.
+            let valid = validateStudents();
+        } else if (selectUserCategory.value === 'organization'){
+            // Validate orgnizations data first, then create account.
+            let valid = validateCompanies();
+        }
+
+        if (valid) {
+            createAccount();
+        } else {
+            console.error();
+        }
+
 }
 
-// // if student validation is true create account
-//    if (!validateStudents()) {
-//       console.error();
-//    } else {
-//        createAccount();
-//    }
+// let valid = false;
+// if(selectUserCategory.value === 'student'){
+//     // Validate students data first, then create account.
+//     let valid = validateStudents();
+// } else if (selectUserCategory.value === 'organization'){
+//     // Validate orgnizations data first, then create account.
+//     let valid = validateCompanies();
+// }
 
-// //    if organization validation is true create account
-//    if (!validateCompanies()) {
-//        console.error();
-//    } else {
-//        createAccount();
-       
-//    }
+// if (valid) {
+// 	createAccount();
+// } else {
+// 	console.error();
+// }
 
 
 // Form submission via FETCH
