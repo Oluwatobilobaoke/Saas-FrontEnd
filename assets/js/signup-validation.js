@@ -131,7 +131,7 @@ function validateStudents(){
     console.log(validateInputs);
 }
 
-// Validate the data of students registration
+// Validate the data of Company registration
 function validateCompanies(){
     let inputAndErrorDetails = [['inputOrgName', 'inputOrgNameErr', 'Company name'], 
     ['inputOrgEmail', 'inputOrgEmailErr', 'Email'], ['inputOrgPhone', 'inputOrgPhoneErr', 'Phone number'], 
@@ -163,25 +163,46 @@ function createAccount(){
     }
 }
 
+   if (!validateStudents()) {
+      console.error();
+   } else {
+       createAccount();
+   }
+
+   if (!validateCompanies()) {
+       console.error();
+   } else {
+       createAccount();
+       
+   }
+
+
 // Form submission via FETCH
 
-document.getElementById("signUpForm").addEventListener("click", signUpForm);
+document.addEventListener("DOMContentLoaded", () => {
 
-function signUpForm (event){
-    event.preventDefault();
-    // let inputStudentName
+    const signUpForm = document.getElementById("signUpForm");
+    
+    signUpForm.addEventListener('click', function(e) {
+        e.preventDefault();
 
-    fetch(`${url}user/signup`, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify()
-    }).then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-}
+        let studentName = document.getElementById('inputStudentName').value;
+        let studentEmail = document.getElementById('inputStudentEmail').value;
+        
+
+        fetch(`${url}user/signup`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({studentName:inputStudentName, studentEmail:inputStudentEmail})        
+        }).then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err))
+    })
+
+   });
 
 
 
-   
+
