@@ -163,14 +163,12 @@ function createAccount(){
     }
 }
 
-// if student validation is true create account
    if (!validateStudents()) {
       console.error();
    } else {
        createAccount();
    }
 
-//    if organization validation is true create account
    if (!validateCompanies()) {
        console.error();
    } else {

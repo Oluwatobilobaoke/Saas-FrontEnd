@@ -163,14 +163,12 @@ function createAccount(){
     }
 }
 
-// if student validation is true create account
    if (!validateStudents()) {
       console.error();
    } else {
        createAccount();
    }
 
-//    if organization validation is true create account
    if (!validateCompanies()) {
        console.error();
    } else {
@@ -181,6 +179,7 @@ function createAccount(){
 
 // Form submission via FETCH
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
 
     const signUpForm = document.getElementById("signUpForm");
@@ -208,3 +207,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+=======
+// document.getElementById("signUpForm").addEventListener("click", signUpForm);
+
+// function signUpForm (event){
+//     event.preventDefault();
+//     // let inputStudentName
+
+//     fetch(`${url}user/signup`, {
+//         method: "POST",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify()
+//     }).then((res) => res.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+// }
+
+
+
+   
+>>>>>>> 172565d8d9ec9edefcab402597ee309ced8733bf
