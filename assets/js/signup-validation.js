@@ -163,47 +163,47 @@ function createAccount(){
     }
 }
 
-// if student validation is true create account
-   if (!validateStudents()) {
-      console.error();
-   } else {
-       createAccount();
-   }
+// // if student validation is true create account
+//    if (!validateStudents()) {
+//       console.error();
+//    } else {
+//        createAccount();
+//    }
 
-//    if organization validation is true create account
-   if (!validateCompanies()) {
-       console.error();
-   } else {
-       createAccount();
+// //    if organization validation is true create account
+//    if (!validateCompanies()) {
+//        console.error();
+//    } else {
+//        createAccount();
        
-   }
+//    }
 
 
 // Form submission via FETCH
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    const signUpForm = document.getElementById("signUpForm");
+//     const signUpForm = document.getElementById("signUpForm");
     
-    signUpForm.addEventListener('click', function(e) {
-        e.preventDefault();
+//     signUpForm.addEventListener('click', function(e) {
+//         e.preventDefault();
 
-        let studentName = document.getElementById('inputStudentName').value;
-        let studentEmail = document.getElementById('inputStudentEmail').value;
+//         let studentName = document.getElementById('inputStudentName').value;
+//         let studentEmail = document.getElementById('inputStudentEmail').value;
         
 
-        fetch(`${url}user/signup`, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({studentName:inputStudentName, studentEmail:inputStudentEmail})        
-        }).then((res) => res.json())
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err))
-    })
+//         fetch(`${url}user/signup`, {
+//             method: "POST",
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({studentName:inputStudentName, studentEmail:inputStudentEmail})        
+//         }).then((res) => res.json())
+//         .then((data) => console.log(data))
+//         .catch((err) => console.log(err))
+//     })
 
-   });
+//    });
 
 
 
