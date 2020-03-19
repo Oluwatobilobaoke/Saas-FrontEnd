@@ -13,8 +13,11 @@
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <script type="text/javascript" src="./assets/js/homepage.js"></script>
         <script type="text/javascript" src="./assets/js/signup-validation.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        
     </head>
 
     <body>
@@ -85,7 +88,7 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h5 class="card-title text-center">Create an Account</h5>
-                  <form class="form-signin" name="signUpForm" action="Dashboard/Student/index.html" method="POST" onsubmit="return validateForm()" novalidate>
+                  <form class="form-signin" name="signUpForm" id="signUpForm" action="" method="POST" novalidate>
                     <div class="third-party-signups">
                       <a class="button google-branded-button j-third-party t-google-signup" href="#">
                          <span class="google-branded-button-icon">

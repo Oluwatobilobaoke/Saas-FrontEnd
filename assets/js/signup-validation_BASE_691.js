@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             studentAccountCreationSection.style.display = 'none';
             organizationAccountCreationSection.style.display = 'none';
             createAccountBtn.removeAttribute("disabled");
-            // Fetch the category for organizations
+            // Fetch the category for organizations 
             fetch(`${url}organizations/categories`)
             .then(res => res.json())
             .then(res => {
@@ -131,7 +131,7 @@ function validateStudents(){
     console.log(validateInputs);
 }
 
-// Validate the data of Company registration
+// Validate the data of students registration
 function validateCompanies(){
     let inputAndErrorDetails = [['inputOrgName', 'inputOrgNameErr', 'Company name'], 
     ['inputOrgEmail', 'inputOrgEmailErr', 'Email'], ['inputOrgPhone', 'inputOrgPhoneErr', 'Phone number'], 
@@ -153,80 +153,35 @@ function validateCompanies(){
 
 function createAccount(){
     let selectUserCategory = document.querySelector('#selectUserCategory');
-    let valid = false;
-        if(selectUserCategory.value === 'student'){
-            // Validate students data first, then create account.
-            let valid = validateStudents();
-        } else if (selectUserCategory.value === 'organization'){
-            // Validate orgnizations data first, then create account.
-            let valid = validateCompanies();
-        }
-
-        if (valid) {
-            createAccount();
-        } else {
-            console.error();
-        }
-
+    if(selectUserCategory.value === 'student'){
+        // Validate students data first, then create account.
+        validateStudents();
+    }
+    else if(selectUserCategory.value === 'organization'){
+        // Validate orgnizations data first, then create account.
+        validateCompanies();
+    }
 }
-
 
 // Form submission via FETCH
 
-     
-        let formData = {
-            user_type: "student",
-            email: document.querySelector('#inputStudentEmail').value,
-            phone_number: document.querySelector('#inputStudentPhone').value,
-            address: document.querySelector('#inputStudentAddress').value,
-            password: document.querySelector('#inputStudentPassword').value,
-            full_name: document.querySelector('#inputStudentName').value,
-            availability: document.querySelector('#inputStudentAvailability').value,
-            hourly_rate: document.querySelector('#inputStudentRate').value,
-            }
+document.getElementById("signUpForm").addEventListener("click", signUpForm);
 
-            fetch(`${url}user/signup`, {
-                        method: "POST",
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)        
-                    }).then(function(response) {
-                // The response is a Response instance.
-                // You parse the data into a useable format using `.json()`
-                return response.json();
-            }).then(function(data) {
-                // `data` is the parsed version of the JSON returned from the above endpoint.
-                console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
-            });
+function signUpForm (event){
+    event.preventDefault();
+    // let inputStudentName
 
-// for company
-            // let formDataC = {
-            //     user_type: "organization",
-            //     email: document.querySelector('#inputOrgEmail').value,
-            //     phone_number: document.querySelector('#inputOrgPhone').value,
-            //     address: document.querySelector('#inputOrgAddress').value,
-            //     password: document.querySelector('#inputOrgPassword').value,
-            //     name: document.querySelector('#inputOrgName').value,
-            //     description: document.querySelector('#inputOrgDescription').value,
-            //     category_id: document.querySelector('#inputOrgCategories').value,
-            //     }
-    
-            //     fetch(`${url}user/signup`, {
-            //                 method: "POST",
-            //                 headers: {
-            //                     'Content-Type': 'application/json'
-            //                 },
-            //                 body: JSON.stringify(formDataC)        
-            //             }).then(function(response) {
-            //         // The response is a Response instance.
-            //         // You parse the data into a useable format using `.json()`
-            //         return response.json();
-            //     }).then(function(data) {
-            //         // `data` is the parsed version of the JSON returned from the above endpoint.
-            //         console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
-            //     });
+    fetch(`${url}user/signup`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify()
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err))
+}
 
 
 
-
+   
