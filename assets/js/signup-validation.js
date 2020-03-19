@@ -172,7 +172,7 @@ function createAccount(){
 
 
 // Form submission via FETCH
-
+document.getElementById("signUpForm").addEventListener("submit", myFunction);
      
         let formData = {
             user_type: "student",
