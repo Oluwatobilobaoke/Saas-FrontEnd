@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             studentAccountCreationSection.style.display = 'none';
             organizationAccountCreationSection.style.display = 'none';
             createAccountBtn.removeAttribute("disabled");
-            // Fetch the category for organizations 
+            // Fetch the category for organizations
             fetch(`${url}organizations/categories`)
             .then(res => res.json())
             .then(res => {
