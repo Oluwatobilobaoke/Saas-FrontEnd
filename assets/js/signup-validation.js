@@ -165,6 +165,7 @@ function createAccount(){
     }
 }
 
+// Handling Form Submission as JSON for student
 function createStudentAccount(){
     let studentData = {
         user_type: "student",
@@ -188,12 +189,22 @@ function createStudentAccount(){
     .then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
         console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
+      
+      
+        if(data.token){
+        localStorage.setItem('access_token', data.token);
+        window.location = "/../../Dashboard/Student/index.html"
+        } else {
+          alert('Error: Authorization token is needed')
+        }
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
     })
 }
 
+
+// Handling Form Submission as JSON for Organizations
 function createCompanyAccount(){
     let companyData = {
         user_type: "organization",
@@ -217,6 +228,14 @@ function createCompanyAccount(){
     .then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
         console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
+      
+      
+        if(data.token){
+        localStorage.setItem('access_token', data.token);
+        window.location = "/../Dashboard/Company/index.html"
+        } else {
+          alert("Error: Authorization token is needed")
+        }
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
