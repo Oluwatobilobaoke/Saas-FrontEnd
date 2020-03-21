@@ -1,9 +1,5 @@
 let url = "https://stuaas.herokuapp.com/api/v1/";
 
-document.addEventListener("DOMContentLoaded", () => {
-
-});
-
 function loginAcc() {
     let loginData = {
         email: document.querySelector('#inputEmail').value,
@@ -25,6 +21,7 @@ function loginAcc() {
         window.location = "/../../Dashboard/Student/index.html"
         } else {
           alert('Error: Authorization token is needed')
+          // Rather than alerting, you should displaye an error message saying "Email or Password is wrong"
         }
     })
     .catch(err => {
