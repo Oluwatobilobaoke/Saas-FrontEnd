@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <script type="text/javascript" src="./assets/js/login.js"></script>
     </head>
 
     <body>
@@ -82,7 +83,7 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h5 class="card-title text-center">Log In</h5>
-                  <form class="form-signin">
+                  <form class="form-signin" name="loginForm" id="loginForm" method="POST">
                     <div class="third-party-signups">
                       <a class="button google-branded-button j-third-party t-google-signup" href="#">
                          <span class="google-branded-button-icon">
@@ -107,7 +108,7 @@
                       <label class="custom-control-label" for="customCheck1">Remember password</label>
                       <a href="forgot-password.html" class="fgtpass" >Forgot Password</a>
                     </div>
-                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit">Log in</button>
+                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" id="submitloginAcc" type="button" onclick="loginAcc()">Log in</button>
                     
                   </form>
                       <p class="text-center">Don't have an Account yet?<a href="./signUp.html"> Sign Up</a></p>
