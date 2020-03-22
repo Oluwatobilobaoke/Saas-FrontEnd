@@ -1,0 +1,20 @@
+{
+  "name": "Saas-FrontEnd",
+  "version": "1.0.0",
+  "description": "SaaS is a Solution Built for the **DSC Solution Challenge 2020** that aims to empower Students and organizations looking to hire students by providin a powerful platform where students can flaunt their skills and various times of the week that they are available to work and organizations can posts related jobs. This way, students can apply for jobs, and organizations can hire student with matching profile qualifications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gbahdeyboh/Saas-FrontEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gbahdeyboh/Saas-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/Gbahdeyboh/Saas-FrontEnd#readme"
+}
