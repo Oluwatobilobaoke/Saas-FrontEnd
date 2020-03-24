@@ -190,13 +190,9 @@ function createStudentAccount(){
         // `data` is the parsed version of the JSON returned from the above endpoint.
         console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
       
-      
-        if(data.token){
         localStorage.setItem('access_token', data.token);
-        window.location = "/../../Dashboard/Student/index.html"
-        } else {
-          alert('Error: Authorization token is needed')
-        }
+        // window.location = "/../../Dashboard/Student/index.html
+        
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
@@ -230,12 +226,6 @@ function createCompanyAccount(){
         console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
       
       
-        if(data.token){
-        localStorage.setItem('access_token', data.token);
-        window.location = "/../Dashboard/Company/index.html"
-        } else {
-          alert("Error: Authorization token is needed")
-        }
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
