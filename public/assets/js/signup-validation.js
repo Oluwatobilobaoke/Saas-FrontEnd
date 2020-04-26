@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     let datas = res.payload.data;
                     datas.forEach(data => {
                         let categories = document.querySelector('#inputOrgCategories');
-                        categories.innerHTML += `<option value="${data.name.toLocaleLowerCase()}" data-id="${data.id}">${data.name}</option>`
+                        categories.innerHTML += `<option value="${data.id}" data-id="${data.id}">${data.name}</option>`
                     })
                 }
             })
@@ -167,6 +167,11 @@ function createAccount(){
 
 // Handling Form Submission as JSON for student
 function createStudentAccount(){
+    // Loader
+    let pagePreloader = document.querySelector('#pagePreloader');
+    let errorsToast = document.querySelector("#errorsToast");
+    // display the loader
+    pagePreloader.style.display = 'block';
     let studentData = {
         user_type: "student",
         email: document.querySelector('#inputStudentEmail').value,
@@ -187,16 +192,18 @@ function createStudentAccount(){
     })
     .then(response => response.json())
     .then(function(data) {
-        // `data` is the parsed version of the JSON returned from the above endpoint.
-        console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
-      
-      
-        if(data.token){
-        localStorage.setItem('access_token', data.token);
-        window.location = "/../../Dashboard/Student/index.html"
-        } else {
-          alert('Error: Authorization token is needed')
+        console.log(data);
+        if(data.success){
+            displayModal();
         }
+        else{
+            let errorMessageBody = document.querySelector('#errorToastOverlay');
+            errorMessageBody.textContent = data.error.message;
+            errorsToast.style.display = 'flex';
+            setTimeout(() => {errorsToast.style.display = 'none'}, 5000);
+        }
+        // Hide the loader
+        pagePreloader.style.display = 'none';
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
@@ -206,6 +213,10 @@ function createStudentAccount(){
 
 // Handling Form Submission as JSON for Organizations
 function createCompanyAccount(){
+    // Loader
+    let pagePreloader = document.querySelector('#pagePreloader');
+    // Display the loader
+    pagePreloader.style.display = 'block';
     let companyData = {
         user_type: "organization",
         email: document.querySelector('#inputOrgEmail').value,
@@ -226,18 +237,31 @@ function createCompanyAccount(){
     })
     .then(response => response.json())
     .then(function(data) {
-        // `data` is the parsed version of the JSON returned from the above endpoint.
-        console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
-      
-      
-        if(data.token){
-        localStorage.setItem('access_token', data.token);
-        window.location = "/../Dashboard/Company/index.html"
-        } else {
-          alert("Error: Authorization token is needed")
+        console.log(data);
+        if(data.success){
+            displayModal();
         }
+        else{
+            let errorMessageBody = document.querySelector('#errorToastOverlay');
+            errorMessageBody.textContent = data.error.message;
+            errorsToast.style.display = 'flex';
+            setTimeout(() => {errorsToast.style.display = 'none'}, 5000);
+        }
+        // Hide the loader
+        pagePreloader.style.display = 'none';
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
     })
+}
+
+function signUpDone(){
+    window.location.assign('./index.html');
+}
+
+function displayModal(){
+    let signUpPromptContainer = document.querySelector("#signUpPromptContainer");
+    let overlay = document.querySelector("#overlay");
+    signUpPromptContainer.style.display = 'flex';
+    overlay.style.display = 'flex';
 }
