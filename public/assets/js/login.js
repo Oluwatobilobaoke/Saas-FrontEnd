@@ -20,7 +20,7 @@ function loginAcc() {
         // Hide the loader
         pagePreloader.style.display = 'none';
         console.log("The data is ", data);
-        let loginError = document.querySelector('.error');
+        let loginError = document.querySelector('.loginError');
         if(data.success){
             localStorage.setItem('access_token', data.payload.token);
             loginError.style.display = 'none';

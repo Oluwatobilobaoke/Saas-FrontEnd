@@ -3164,6 +3164,11 @@ background: #f8f8f8;
 .error{
   color: red;
   font-size: 1.1.em;
+}
+
+.loginError{
+  color: red;
+  font-size: 1.1.em;
   display: none;
 }
 #errorsToast{

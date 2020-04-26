@@ -63,6 +63,7 @@ function SaasValidator(){
         // This method takes in an array if values and makes checks if any of them is an empty string.
         arr.forEach(data => {
             if (data[0] === "") {
+                console.log("It got here");
                 document.getElementById(data[1]).textContent = `${data[2]} is required`;
             }
             else{
@@ -144,11 +145,10 @@ function validateCompanies(){
         // corresponding error and field name in a single Array
         return [document.getElementById(data[0]).value, data[1], data[2]];
     })
-    console.log(inputAndErrorDetails);
-    // Check if all the fields have been filled out and display error messages fr the ones that aren't filled
+    // Check if all the fields have been filled out and display error messages for the ones that aren't filled
     let Validator = new SaasValidator();
     let validateInputs = Validator.validateAll(inputAndErrorDetails);
-    console.log(validateInputs);
+    console.log("Valid Inputs are ", validateInputs);
     return validateInputs;
 }
 
