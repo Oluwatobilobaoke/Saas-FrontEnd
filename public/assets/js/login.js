@@ -1,5 +1,5 @@
 let url = "https://stuaas.herokuapp.com/api/v1/";
-
+let baseUrl = "http://127.0.0.1:5500/public/" || "https://stuass.works/"
 function loginAcc() {
     // Display the loader immediately login is clicked
     let pagePreloader = document.querySelector('#pagePreloader');
