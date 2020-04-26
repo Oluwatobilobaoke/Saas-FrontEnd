@@ -194,6 +194,8 @@ function createStudentAccount(){
     .then(function(data) {
         console.log(data);
         if(data.success){
+            let newUserName = document.querySelector("#newUserName");
+            newUserName.textContent = data.payload.data.full_name.split(" ")[0] + '!';
             displayModal();
         }
         else{
