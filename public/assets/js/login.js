@@ -1,6 +1,9 @@
 let url = "https://stuaas.herokuapp.com/api/v1/";
 let baseUrl = "http://127.0.0.1:5500/public/" || "https://stuass.works/"
 function loginAcc() {
+    // Display the loader immediately login is clicked
+    let pagePreloader = document.querySelector('#pagePreloader');
+    pagePreloader.style.display = 'block';
     let loginData = {
         email: document.querySelector('#inputEmail').value,
         password: document.querySelector('#inputPassword').value,
@@ -12,35 +15,25 @@ function loginAcc() {
         },
         body: JSON.stringify(loginData)
     })
-        .then(response => response.json())
-        .then(function (data) {
-            console.log(data);
-
-
-            if (data.success == true) {
-                let user_type = data.payload.data.user_type;
-                console.log(user_type);
-                let token = data.payload.token;
-                console.log(token);
-                localStorage.setItem('token', JSON.stringify(token));
-
-                if (user_type == "student") {
-                    window.location.replace(`${baseUrl}Dashboard/Student/index.html`);
-                } else if (user_type == "organization") {
-                    window.location.replace(`${baseUrl}Dashboard/Company/index.html`);
-                } else {
-                    return false;
-                }
-
-
-            } else if (data.success == false) {
-                alert(data.error.message);
-            }
-
-        })
-        .catch(err => {
-            console.log("The error is ==>> ", err);
-        })
+    .then(response => response.json())
+    .then(function(data) {
+        // Hide the loader
+        pagePreloader.style.display = 'none';
+        console.log("The data is ", data);
+        let loginError = document.querySelector('.error');
+        if(data.success){
+            localStorage.setItem('access_token', data.payload.token);
+            loginError.style.display = 'none';
+            window.location.assign("./Dashboard/Student/index.html");
+        }
+        else{
+            // Display the login error
+            loginError.style.display = 'block';
+        }
+    })
+    .catch(err => {
+        console.log("The error is ==>> ", err);
+    })
 }
 
 
