@@ -190,6 +190,9 @@ function createAccount() {
 function createStudentAccount() {
 =======
 function createStudentAccount(){
+<<<<<<< HEAD
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
+=======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let studentData = {
         user_type: "student",
@@ -259,6 +262,9 @@ function createStudentAccount(){
 function createCompanyAccount() {
 =======
 function createCompanyAccount(){
+<<<<<<< HEAD
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
+=======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let companyData = {
         user_type: "organization",
@@ -320,5 +326,9 @@ function createCompanyAccount(){
     .catch(err => {
         console.log("The error is ==>> ", err);
     })
+<<<<<<< HEAD
+}
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
+=======
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
