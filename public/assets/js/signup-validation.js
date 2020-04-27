@@ -192,11 +192,14 @@ function createStudentAccount() {
 function createStudentAccount(){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let studentData = {
@@ -269,11 +272,14 @@ function createCompanyAccount() {
 function createCompanyAccount(){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let companyData = {
@@ -338,6 +344,7 @@ function createCompanyAccount(){
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
@@ -345,6 +352,9 @@ function createCompanyAccount(){
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+}
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
