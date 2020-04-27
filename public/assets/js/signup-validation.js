@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             createAccountBtn.removeAttribute("disabled");
             // Fetch the category for organizations
             fetch(`${url}organizations/categories`)
+<<<<<<< HEAD
                 .then(res => res.json())
                 .then(res => {
                     studentAccountCreationSection.style.display = "none";
@@ -38,6 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 .catch(err => {
                     console.log("The error is => ", err);
                 })
+=======
+            .then(res => res.json())
+            .then(res => {
+                studentAccountCreationSection.style.display = "none";
+                organizationAccountCreationSection.style.display = "block";
+                if(res.success){
+                    let datas = res.payload.data;
+                    datas.forEach(data => {
+                        let categories = document.querySelector('#inputOrgCategories');
+                        categories.innerHTML += `<option value="${data.name.toLocaleLowerCase()}" data-id="${data.id}">${data.name}</option>`
+                    })
+                }
+            })
+            .catch(err => {
+                console.log("The error is => ", err);
+            })
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
         }
         else if (userCategorySelected === "0") {
             createAccountBtn.setAttribute("disabled", '');
@@ -173,11 +191,14 @@ function createStudentAccount() {
 =======
 function createStudentAccount(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let studentData = {
         user_type: "student",
         email: document.querySelector('#inputStudentEmail').value,
@@ -194,7 +215,27 @@ function createStudentAccount(){
         headers: {
             'Content-Type': 'application/json'
         },
+<<<<<<< HEAD
         body: JSON.stringify(studentData)
+=======
+        body: JSON.stringify(studentData)        
+    })
+    .then(response => response.json())
+    .then(function(data) {
+        // `data` is the parsed version of the JSON returned from the above endpoint.
+        console.log(data);  //q { "userId": 1, "id": 1, "title": "...", "body": "..." }
+      
+      
+        if(data.token){
+        localStorage.setItem('access_token', data.token);
+        window.location = "/../../Dashboard/Student/index.html"
+        } else {
+          alert('Error: Authorization token is needed')
+        }
+    })
+    .catch(err => {
+        console.log("The error is ==>> ", err);
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     })
         .then(response => response.json())
         .then(function (data) {
@@ -227,11 +268,14 @@ function createCompanyAccount() {
 =======
 function createCompanyAccount(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
     let companyData = {
         user_type: "organization",
         email: document.querySelector('#inputOrgEmail').value,
@@ -293,6 +337,7 @@ function createCompanyAccount(){
         console.log("The error is ==>> ", err);
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
@@ -300,3 +345,6 @@ function createCompanyAccount(){
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+}
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
