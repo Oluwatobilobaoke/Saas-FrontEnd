@@ -12,7 +12,6 @@ function loginAcc() {
         },
         body: JSON.stringify(loginData)
     })
-<<<<<<< HEAD
         .then(response => response.json())
         .then(function (data) {
             console.log(data);
@@ -42,23 +41,6 @@ function loginAcc() {
         .catch(err => {
             console.log("The error is ==>> ", err);
         })
-=======
-    .then(response => response.json())
-    .then(function(data) {
-        console.log(data); //
-
-        if(data.token){
-        localStorage.setItem('access_token', data.token);
-        window.location = "/../../Dashboard/Student/index.html"
-        } else {
-          alert('Error: Authorization token is needed')
-          // Rather than alerting, you should displaye an error message saying "Email or Password is wrong"
-        }
-    })
-    .catch(err => {
-        console.log("The error is ==>> ", err);
-    })
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 }
 
 
