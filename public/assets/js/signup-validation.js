@@ -195,11 +195,14 @@ function createStudentAccount(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
@@ -281,11 +284,14 @@ function createCompanyAccount(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
@@ -359,6 +365,7 @@ function createCompanyAccount(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
@@ -366,6 +373,9 @@ function createCompanyAccount(){
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 >>>>>>> parent of fdd6e58... reverting for now
+=======
+}
+>>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 =======
 }
 >>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
