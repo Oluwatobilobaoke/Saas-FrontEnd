@@ -16,7 +16,10 @@ Clone this reposotory
 Navigate the the directory of this project on your terminal and run the command `firebase serve`
 
 ## Design
-The designer did an amazing work on the look and feel of the app and he did write a UX case study for his design, you can find the UX case study [here](https://www.notion.so/Designing-Student-As-A-Service-Job-Board-DSC-Solution-Challenge-2020-e509fb81c89544f1a4b350c07556d1a6)
+The designer did an amazing work on the look and feel of the app and he did write a UX case study for his design, you can find the UX case study. The Design and the Design case study can be found below
+
+- [Design](https://www.figma.com/file/yQyoQzFjYMS5vHV3ffVBS0/SaaS?node-id=0%3A1)
+- [Design Case Study](https://www.notion.so/Designing-Student-As-A-Service-Job-Board-DSC-Solution-Challenge-2020-e509fb81c89544f1a4b350c07556d1a6)
 
 ## Testing
 
@@ -33,6 +36,7 @@ The [back end API](https://github.com/Iyiola-am/saas) for all this features and 
 
 
 ### SaaS is still under Developement :construction: :construction:
+
 
 ![construction site](https://media.giphy.com/media/2SM2lnIDGqZj2/giphy.gif)
 
