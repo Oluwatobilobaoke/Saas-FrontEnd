@@ -457,24 +457,40 @@
      background: #0B7CFF; }
    
    /* Preloader */
-   #preloader {
+   #preloader, #pagePreloader {
      position: fixed;
      top: 0;
      left: 0;
      right: 0;
      bottom: 0;
      background-color: #f8f8f8;
-     z-index: 9999999; }
+     z-index: 9999999;
+    }
+    #pagePreloader{
+      display: none;
+      background: none;
+    }
+    #pagePreloaderOverlay{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f8f8f8;
+      opacity: 0.5
+
+    }
    
-   .loader {
+   .loader, .pageLoader {
      top: 50%;
      width: 50px;
      height: 50px;
      border-radius: 100%;
      position: relative;
-     margin: 0 auto; }
+     margin: 0 auto; 
+   }
    
-   #loader-1:before, #loader-1:after {
+   #loader-1:before, #loader-1:after, #pageLoader1:before, #pageLoader1:after {
      content: "";
      position: absolute;
      top: -10px;
@@ -485,11 +501,11 @@
      border: 7px solid transparent;
      border-top-color: #787676; }
    
-   #loader-1:before {
+   #loader-1:before, #pageLoader1:before {
      z-index: 100;
      animation: spin 2s infinite; }
    
-   #loader-1:after {
+   #loader-1:after, #pageLoader1:after {
      border: 7px solid #f8f8f8; }
    
    @keyframes spin {
@@ -3143,3 +3159,136 @@ background: #f8f8f8;
        font-weight: 400; }
    
    /*# sourceMappingURL=main.css.map */
+
+
+.error{
+  color: red;
+  font-size: 1.1.em;
+}
+
+.loginError{
+  color: red;
+  font-size: 1.1.em;
+  display: none;
+}
+#errorsToast{
+  display: none;
+  z-index: 1000000;
+}
+#errorToast{
+  position: fixed;
+  right: 3em;
+  bottom: 3em;
+  width: 250px;
+  height: 50px;
+  background: black;
+  border-radius: 50px;
+  font-size: 1.1em;
+  opacity: 0;
+  animation: flyUp 5s linear;
+}
+
+#errorToastOverlay{
+  display: none;
+  position: fixed;
+  right: 3em;
+  bottom: 3em;
+  width: 250px;
+  height: 50px;
+  background: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 1.1em;
+  animation: flyUp 5s linear;
+}
+
+@keyframes flyUp{
+    0% {
+        transform: translateY(50px);
+        opacity: 0.8;
+    }
+    1% {
+      transform: translateY(0px);
+      opacity: 0.8;
+    }
+    98% {
+        opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+#overlay{
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: black;
+  opacity: 0.8;
+  z-index: 2000 !important;
+}
+
+#signUpPromptContainer{
+  display: none;
+  background: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2001 !important;
+  justify-content: center;
+  align-items: center;
+}
+#signUpPrompt{
+  width: 500px;
+  height: 300px;
+  background: white;
+}
+
+#signUpPromptHeader{
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 2em;
+}
+
+#signUpPromptBody{
+  width: 100%;
+  height: 240px;
+}
+
+#signUpPromptCancelBtn{
+  cursor: pointer;
+}
+
+#signUpPromptBodyHead{
+  height: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+#signUpPromptBodyText{
+  color: #787676;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 1.3em;
+}
+
+@media only screen and (max-width: 600px){
+  #signUpPrompt{
+    width: 300px !important;
+    height: 400px !important;
+  }
+}

@@ -132,59 +132,10 @@
                             <select name="availability" class="form-control" id="inputStudentAvailability">
                                 <option value="">Availability</option>
                                 <option value="freelance">Freelance</option>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of fdd6e58... reverting for now
                                 <option value="full_time">Full Time</option>
-                                <option venue="part_time">Part Time</option>
+                                <option value="part_time">Part Time</option>
                                 <option value="week_days">Week Days</option>
-                                <option value="week_ends">Week Ends</option>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-                                <option value="fulltime">Full Time</option>
-                                <option venue="parttime">Part Time</option>
-                                <option value="weekdays">Week Days</option>
-                                <option value="weekend">Week End</option>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of fdd6e58... reverting for now
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
+                                <option value="week_ends">Week End</option>
                               </select>
                               <div class="error" id="availibilityStudentErr"></div>
                           </div>
@@ -266,6 +217,32 @@
                   </form>
                       <p class="text-center">Already have an Account ?<a href="./login.html"> Log In</a></p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="pagePreloader">
+            <div id="pagePreloaderOverlay"></div>
+            <div class="pageLoader" id="pageLoader1"></div>
+        </div>
+        <div id="errorsToast">
+          <div id="errorToast"></div>
+          <div id="errorToastOverlay"><!-- Error here --></div>
+        </div>
+
+        <div id="overlay"></div>
+        <div id="signUpPromptContainer">
+          <div id="signUpPrompt">
+            <div id="signUpPromptHeader">
+              <span id="signUpPromptCancelBtn" onclick="signUpDone()">
+                <img src="./assets/img/cancel.png" width="20" height="20">
+              </span>
+            </div>
+            <div id="signUpPromptBody">
+              <div id="signUpPromptBodyHead">Hello,&nbsp;<span id="newUserName"><span></div>
+              <div id="signUpPromptBodyText">
+                Welcome to Stuass! To proceed and complete your account creation, please kindly check your email to verify your account.
               </div>
             </div>
           </div>

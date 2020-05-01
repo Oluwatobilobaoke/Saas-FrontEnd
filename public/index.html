@@ -1,103 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>SaaS</title>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.12.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.12.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.12.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.12.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.12.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>SaaS</title>
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/7.12.0/firebase-app.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/7.12.0/firebase-auth.js"></script>
+        <script defer src="/__/firebase/7.12.0/firebase-database.js"></script>
+        <script defer src="/__/firebase/7.12.0/firebase-messaging.js"></script>
+        <script defer src="/__/firebase/7.12.0/firebase-storage.js"></script>
+        <!-- initialize the SDK after all desired features are loaded -->
+        <script defer src="/__/firebase/init.js"></script>
 
 
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/LineIcons/LineIcons.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
 
-<body>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/LineIcons/LineIcons.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+        <link rel="stylesheet" href="assets/css/slicknav.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
 
-    <header id="home" class="hero-area">
+        <header id="home" class="hero-area">
 
-        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
-            <div class="container">
-                <div class="theme-header clearfix">
-                    <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
-                            aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            <span class="lni-menu"></span>
-                            <span class="lni-menu"></span>
-                            <span class="lni-menu"></span>
-                        </button>
-                        <a href="index.html" class="navbar-brand"><img src="assets/img/saas.png" alt=""></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="main-navbar">
-                        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="./index.html" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./findExperts.html">
+            <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+                <div class="container">
+                    <div class="theme-header clearfix">
+                        <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="lni-menu"></span>
+                                <span class="lni-menu"></span>
+                                <span class="lni-menu"></span>
+                            </button>
+                            <a href="index.html" class="navbar-brand"><img src="assets/img/saas.png" alt=""></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main-navbar">
+                            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="./index.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./findExperts.html">
                                     Find Experts
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./jobs.html">
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./jobs.html">
                                     Jobs
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-success" href="./login.html">
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn-success" href="./login.html">
                                     Login
-                                </a>
-                            </li>
-                            <li class="button-group">
-                                <a href="./signUp.html" class="button">Sign Up</a>
-                            </li>
-                        </ul>
+                                    </a>
+                                </li>
+                                <li class="button-group">
+                                    <a href="./signUp.html" class="button">Sign Up</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-            </div>
-            <div class="mobile-menu" data-logo="assets/img/saas.png"></div>
-        </nav>
-
-    </header>
-
-
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner-header">
-                        <h3>Find Jobs, hire and Collaborate with </h3>
-                        <h3>Student freelancers</h3>
-                        <BR>
-                        <p>Hire Freelancers and specialists who are still in school to help you do amazing stuff with
-                            your business</p>
-                        <br>
-                        <div class="">
-                            <a href="#" class="btn btn-dark btn-common">Get Started</a>
-=======
                 <div class="mobile-menu" data-logo="assets/img/saas.png"></div>
             </nav>
 
@@ -115,51 +90,48 @@
                                 <p>Hire Freelancers and specialists who are still in school to help you do amazing stuff with your business</p>
                                 <br>
                                     <div class="">
-                                        <a href="#" class="btn btn-dark btn-common">Get Started</a>
+                                        <a href="#loadMoreListing" class="btn btn-dark btn-common">Get Started</a>
                                     </div>
                             </div>
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
 
-    <section id="featured" class="section bg-cyan">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Companies</h2>
-                <p>Find companies actively hiring students freelancers and remote workers</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="job-featured">
-                        <div class="icon">
-                            <img src="assets/img/features/img1.png" alt="">
+        <section id="featured" class="section bg-cyan">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Companies</h2>
+                    <p>Find companies actively hiring students freelancers and remote workers</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="job-featured">
+                            <div class="icon">
+                                <img src="assets/img/features/img1.png" alt="">
+                            </div>
+                        <div class="content">
+                             <h3><a href="#"> Oluwatobiloba</a></h3>
+                             <p class="brand">I'm a normal dude working on solution challenge.</p>
+                             <span class="full-time">Freelance</span>
+                             <span class="full-time">₦1000/hr</span>
                         </div>
+                    </div>
+                </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="job-featured">
+                            <div class="icon">
+                                <img src="assets/img/features/img2.png" alt="">
+                            </div>
                         <div class="content">
                             <h3><a href="#"> Oluwatobiloba</a></h3>
                             <p class="brand">I'm a normal dude working on solution challenge.</p>
                             <span class="full-time">Freelance</span>
                             <span class="full-time">₦1000/hr</span>
-                        </div>
+                            </div>
+                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="job-featured">
-                        <div class="icon">
-                            <img src="assets/img/features/img2.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3><a href="#"> Oluwatobiloba</a></h3>
-                            <p class="brand">I'm a normal dude working on solution challenge.</p>
-                            <span class="full-time">Freelance</span>
-                            <span class="full-time">₦1000/hr</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="job-featured">
                         <div class="icon">
@@ -173,32 +145,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="job-featured">
-                        <div class="icon">
-                            <img src="assets/img/features/img4.png" alt="">
-                        </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="job-featured">
+                            <div class="icon">
+                                <img src="assets/img/features/img4.png" alt="">
+                            </div>
                         <div class="content">
+                             <h3><a href="#"> Oluwatobiloba</a></h3>
+                             <p class="brand">I'm a normal dude working on solution challenge.</p>
+                             <span class="full-time">Freelance</span>
+                             <span class="full-time">₦1000/hr</span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="job-featured">
+                            <div class="icon">
+                                <img src="assets/img/features/img5.png" alt="">
+                            </div>
+                             <div class="content">
                             <h3><a href="#"> Oluwatobiloba</a></h3>
                             <p class="brand">I'm a normal dude working on solution challenge.</p>
                             <span class="full-time">Freelance</span>
                             <span class="full-time">₦1000/hr</span>
-                        </div>
+                            </div>
+                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="job-featured">
-                        <div class="icon">
-                            <img src="assets/img/features/img5.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3><a href="#"> Oluwatobiloba</a></h3>
-                            <p class="brand">I'm a normal dude working on solution challenge.</p>
-                            <span class="full-time">Freelance</span>
-                            <span class="full-time">₦1000/hr</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="job-featured">
                         <div class="icon">
@@ -213,316 +185,283 @@
                     </div>
                 </div>
                 <div class="col-12 text-center mt-4">
-                    <a href="#" class="btn btn-common">Browse All Jobs</a>
+                     <a href="#" class="btn btn-common">Browse All Jobs</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="job-listings" class="section bg-cyan">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Recent Job Post</h2>
-                <p>Find Jobs around you that perfectly matches your skillset and schedule</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-xs-12">
-                    <a class="job-listings" href="#">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <div class="job-company-logo">
-                                    <img src="assets/img/features/img1.png" alt="">
-                                </div>
-                                <div class="job-details">
-                                    <h3>Senor Product Deisgner</h3>
-                                    <span class="company-neme">
-                                        Aula Education
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
-                                <span class="btn-open">
-                                    Product Design
-                                </span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-full-time">UI, UX</span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <p class="location">4 days ago</p>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-apply">Apply Now</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="job-listings" href="#">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <div class="job-company-logo">
-                                    <img src="assets/img/features/img1.png" alt="">
-                                </div>
-                                <div class="job-details">
-                                    <h3>Senor Product Deisgner</h3>
-                                    <span class="company-neme">
-                                        Aula Education
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
-                                <span class="btn-open">
-                                    Product Design
-                                </span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-full-time">UI, UX</span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <p class="location">4 days ago</p>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-apply">Apply Now</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="job-listings" href="#">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <div class="job-company-logo">
-                                    <img src="assets/img/features/img1.png" alt="">
-                                </div>
-                                <div class="job-details">
-                                    <h3>Senor Product Deisgner</h3>
-                                    <span class="company-neme">
-                                        Aula Education
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
-                                <span class="btn-open">
-                                    Product Design
-                                </span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-full-time">UI, UX</span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <p class="location">4 days ago</p>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-apply">Apply Now</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="job-listings" href="#">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <div class="job-company-logo">
-                                    <img src="assets/img/features/img1.png" alt="">
-                                </div>
-                                <div class="job-details">
-                                    <h3>Senor Product Deisgner</h3>
-                                    <span class="company-neme">
-                                        Aula Education
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
-                                <span class="btn-open">
-                                    Product Design
-                                </span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-full-time">UI, UX</span>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <p class="location">4 days ago</p>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
-                                <span class="btn-apply">Apply Now</span>
-                            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                            </div>
-                        </a>
-                    </div>
-                        <div class="col-12 text-center mt-4">
-                        <a href="#" class="btn btn-common">Load more listing</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of fdd6e58... reverting for now
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-=======
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 text-center mt-4">
-                    <a href="#" class="btn btn-common">Load more listing</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="apply">
-        <div class="container-fulid">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-xs-12 no-padding">
-                    <div class="recruiter item-box">
-                        <div class="content-inner">
-                            <h5>I'm An</h5>
-                            <h3>Entrepreneur</h3>
-                            <p>Post a job to tell us about your project. We'll quickly match you with <br> the right
-                                Student freelancers find place best.</p>
-                            <a href="#" class="btn btn-border-filled">Post a Job</a>
-                        </div>
-                        <div class="img-thumb">
-                            <i class="lni-users"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-xs-12 no-padding">
-                    <div class="jobseeker item-box">
-                        <div class="content-inner">
-                            <h5>I'm</h5>
-                            <h3>Student!</h3>
-                            <p>Post a job to tell us about your project. We'll quickly match you with <br> the right
-                                freelancers find place best.</p>
-                            <a href="#" class="btn btn-border-filled">Browser Jobs</a>
-                        </div>
-                        <div class="img-thumb">
-                            <i class="lni-leaf"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="subscribe" class="section bg-cyan">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="subscribe-form">
-                        <div class="form-wrapper">
-                            <div class="sub-title">
-                                <h3>Subscribe Our Newsletter</h3>
-                                <p>Sign Up to get Weekly Updates from SaaS.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="subscribe-form">
-                        <div class="form-wrapper">
-                            <form>
-                                <div class="row">
-                                    <div class="col-12 form-line">
-                                        <div class="form-group form-search">
-                                            <input type="email" class="form-control" name="email"
-                                                placeholder="Email Address">
-                                            <br>
-                                            <button type="submit" class="btn btn-dark btn-search">Subscribe</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <footer>
-
-        <section class="footer-Content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-                        <div class="widget">
-                            <div class="footer-logo mb-2"><img src="assets/img/saas.png" alt=""></div>
-                            <div class="textwidget">
-                                <p>© Copyright 2020 SaaS All rights reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">SITEMAPS</h3>
-                            <ul class="menu">
-                                <li><a href="./findExperts.html">Find Experts</a></li>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="./jobs.html">Jobs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">More</h3>
-                            <ul class="menu">
-                                <li><a href="expertInformation.html">Experts Details</a></li>
-                                <li><a href="jobDetails.html">Job Details</a></li>
-                                <li><a href="postAjob.html">Jobs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">More</h3>
-                            <ul class="menu">
-                                <li><a href="Dashboard/Student/index.html">Dasboard Student</a></li>
-                                <li><a href="Dashboard/Company/index.html">Dashboard Company</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-    </footer>
+
+        <section id="job-listings" class="section bg-cyan">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Job Post</h2>
+                    <p>Find Jobs around you that perfectly matches your skillset and schedule</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <a class="job-listings" href="#">
+                            <div class="row">
+                            <div class="col-lg-4 col-md-4 col-xs-12">
+                            <div class="job-company-logo">
+                                <img src="assets/img/features/img1.png" alt="">
+                            </div>
+                            <div class="job-details">
+                                <h3>Senor Product Deisgner</h3>
+                                <span class="company-neme">
+                                Aula Education
+                                </span>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
+                                <span class="btn-open">
+                                Product Design
+                                </span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-full-time">UI, UX</span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <p class="location">4 days ago</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-apply">Apply Now</span>
+                            </div>
+                            </div>
+                        </a>
+                        <a class="job-listings" href="#">
+                            <div class="row">
+                            <div class="col-lg-4 col-md-4 col-xs-12">
+                            <div class="job-company-logo">
+                                <img src="assets/img/features/img1.png" alt="">
+                            </div>
+                            <div class="job-details">
+                                <h3>Senor Product Deisgner</h3>
+                                <span class="company-neme">
+                                Aula Education
+                                </span>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
+                                <span class="btn-open">
+                                Product Design
+                                </span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-full-time">UI, UX</span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <p class="location">4 days ago</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-apply">Apply Now</span>
+                            </div>
+                            </div>
+                        </a>
+                        <a class="job-listings" href="#">
+                            <div class="row">
+                            <div class="col-lg-4 col-md-4 col-xs-12">
+                            <div class="job-company-logo">
+                                <img src="assets/img/features/img1.png" alt="">
+                            </div>
+                            <div class="job-details">
+                                <h3>Senor Product Deisgner</h3>
+                                <span class="company-neme">
+                                Aula Education
+                                </span>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
+                                <span class="btn-open">
+                                Product Design
+                                </span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-full-time">UI, UX</span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <p class="location">4 days ago</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-apply">Apply Now</span>
+                            </div>
+                            </div>
+                        </a>
+                        <a class="job-listings" href="#">
+                            <div class="row">
+                            <div class="col-lg-4 col-md-4 col-xs-12">
+                            <div class="job-company-logo">
+                                <img src="assets/img/features/img1.png" alt="">
+                            </div>
+                            <div class="job-details">
+                                <h3>Senor Product Deisgner</h3>
+                                <span class="company-neme">
+                                Aula Education
+                                </span>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-center">
+                                <span class="btn-open">
+                                Product Design
+                                </span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-full-time">UI, UX</span>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <p class="location">4 days ago</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12 text-right">
+                                <span class="btn-apply">Apply Now</span>
+                            </div>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="col-12 text-center mt-4">
+                        <a href="#" class="btn btn-common" id="loadMoreListing">Load more listing</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+            <div id="apply">
+                <div class="container-fulid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-xs-12 no-padding">
+                        <div class="recruiter item-box">
+                        <div class="content-inner">
+                            <h5>I'm An</h5>
+                            <h3>Entrepreneur</h3>
+                            <p>Post a job to tell us about your project. We'll quickly match you with <br> the right  Student freelancers find place best.</p>
+                            <a href="#" class="btn btn-border-filled">Post a Job</a>
+                        </div>
+                        <div class="img-thumb">
+                             <i class="lni-users"></i>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-xs-12 no-padding">
+                        <div class="jobseeker item-box">
+                        <div class="content-inner">
+                        <h5>I'm</h5>
+                        <h3>Student!</h3>
+                        <p>Post a job to tell us about your project. We'll quickly match you with <br> the right freelancers find place best.</p>
+                        <a href="#" class="btn btn-border-filled">Browser Jobs</a>
+                        </div>
+                        <div class="img-thumb">
+                        <i class="lni-leaf"></i>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subscribe" class="section bg-cyan">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="subscribe-form">
+                                <div class="form-wrapper">
+                                            <div class="sub-title">
+                                            <h3>Subscribe Our Newsletter</h3>
+                                            <p>Sign Up to get Weekly Updates from SaaS.</p>
+                                            </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                            <div class="subscribe-form">
+                                                <div class="form-wrapper">
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-12 form-line">  
+                                                                <div class="form-group form-search">
+                                                                <input type="email" class="form-control" name="email" placeholder="Email Address">
+                                                                <br>
+                                                                <button type="submit" class="btn btn-dark btn-search">Subscribe</button>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                </div>
+                                                
+                                            </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+    
 
 
-    <a href="#" class="back-to-top">
-        <i class="lni-arrow-up"></i>
-    </a>
-
-    <div id="preloader">
-        <div class="loader" id="loader-1"></div>
-    </div>
 
 
-    <script src="assets/js/jquery-min.js"></script>
-    <script src="assets/js/boostrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+        <footer>
 
+            <section class="footer-Content">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                            <div class="widget">
+                            <div class="footer-logo mb-2"><img src="assets/img/saas.png" alt=""></div>
+                            <div class="textwidget">
+                                 <p>© Copyright 2020 SaaS All rights reserved.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                            <div class="widget">
+                                    <h3 class="block-title">SITEMAPS</h3>
+                                <ul class="menu">
+                                    <li><a href="./findExperts.html">Find Experts</a></li>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./jobs.html">Jobs</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="widget">
+                                <h3 class="block-title">More</h3>
+                                       <ul class="menu">
+                                        <li><a href="expertInformation.html">Experts Details</a></li>
+                                        <li><a href="jobDetails.html">Job Details</a></li>
+                                        <li><a href="postAjob.html">Jobs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="widget">
+                                        <h3 class="block-title">More</h3>
+                                    <ul class="menu">
+                                        <li><a href="/Dashboard/Student/index.html">Dasboard Student</a></li>
+                                        <li><a href="/Dashboard/Company/index.html">Dashboard Company</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                    </div>
+                </div>
+            </section>
+            
+        </footer>
+        
+
+            <a href="#" class="back-to-top">
+            <i class="lni-arrow-up"></i>
+            </a>
+
+            <div id="preloader">
+            <div class="loader" id="loader-1"></div>
+            </div>
+
+
+            <script src="assets/js/jquery-min.js"></script>
+            <script src="assets/js/boostrap.min.js"></script>
+            <script src="assets/js/owl.carousel.min.js"></script>
+            <script src="assets/js/jquery.slicknav.js"></script>
+            <script src="assets/js/jquery.counterup.min.js"></script>
+            <script src="assets/js/waypoints.min.js"></script>
+            <script src="assets/js/form-validator.min.js"></script>
+            <script src="assets/js/main.js"></script>
+    </body>
 </html>

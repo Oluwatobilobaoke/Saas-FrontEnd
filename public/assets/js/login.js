@@ -1,6 +1,37 @@
 let url = "https://stuaas.herokuapp.com/api/v1/";
-let baseUrl = "http://127.0.0.1:5500/public/" || "https://stuass.works/"
+// Check if the user is currently logged in
+let token = localStorage.getItem("access_token");
+// if(token){
+//     fetch(`${url}user`, {
+//         headers: {
+//             'Authorization': `Bearer ${token}`
+//         }
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         if(data.success){
+//             let userType = data.payload.data.user_type;
+//             if(userType === "student"){
+//                 localStorage.setItem("stuData", JSON.stringify(data.payload.data));
+//                 window.location.href = "./dashboard/student/index.html";
+//             }
+//             else{
+//                 localStorage.setItem("comData", JSON.stringify(data.payload.data));
+//                 window.location.href = "./dashboard/company/index.html";
+//             }
+//         }
+//         console.log(data);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
+// }
+
+
 function loginAcc() {
+    // Display the loader immediately login is clicked
+    let pagePreloader = document.querySelector('#pagePreloader');
+    pagePreloader.style.display = 'block';
     let loginData = {
         email: document.querySelector('#inputEmail').value,
         password: document.querySelector('#inputPassword').value,
@@ -12,53 +43,33 @@ function loginAcc() {
         },
         body: JSON.stringify(loginData)
     })
-<<<<<<< HEAD
-        .then(response => response.json())
-        .then(function (data) {
-            console.log(data);
-
-
-            if (data.success == true) {
-                let user_type = data.payload.data.user_type;
-                console.log(user_type);
-                let token = data.payload.token;
-                console.log(token);
-                localStorage.setItem('token', JSON.stringify(token));
-
-                if (user_type == "student") {
-                    window.location.replace(`${baseUrl}Dashboard/Student/index.html`);
-                } else if (user_type == "organization") {
-                    window.location.replace(`${baseUrl}Dashboard/Company/index.html`);
-                } else {
-                    return false;
-                }
-
-
-            } else if (data.success == false) {
-                alert(data.error.message);
-            }
-
-        })
-        .catch(err => {
-            console.log("The error is ==>> ", err);
-        })
-=======
     .then(response => response.json())
     .then(function(data) {
-        console.log(data); //
-
-        if(data.token){
-        localStorage.setItem('access_token', data.token);
-        window.location = "/../../Dashboard/Student/index.html"
-        } else {
-          alert('Error: Authorization token is needed')
-          // Rather than alerting, you should displaye an error message saying "Email or Password is wrong"
+        // Hide the loader
+        pagePreloader.style.display = 'none';
+        console.log("The data is ", data);
+        let loginError = document.querySelector('.loginError');
+        if(data.success){
+            let userType = data.payload.data.user_type;
+            loginError.style.display = 'none';
+            localStorage.setItem('access_token', data.payload.token);
+            if(userType === "student"){
+                localStorage.setItem("stuData", JSON.stringify(data.payload.data));
+                window.location.href = "./dashboard/student/index.html";
+            }
+            else{
+                localStorage.setItem("comData", JSON.stringify(data.payload.data));
+                window.location.href = "./dashboard/company/index.html";
+            }
+        }
+        else{
+            // Display the login error
+            loginError.style.display = 'block';
         }
     })
     .catch(err => {
         console.log("The error is ==>> ", err);
     })
->>>>>>> parent of 104127e... Completed Account Creation and Login Authentication
 }
 
 
