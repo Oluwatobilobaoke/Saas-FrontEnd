@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <script type="text/javascript" src="../js/main.js"></script>
 
 </head>
 
@@ -167,7 +168,7 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h2 mb-0 font-weight-bolder text-dark">Edit Profile</h1>
             <form>
-              <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-dark shadow-sm" type="submit"><i class="text-white-50"></i> Save Changes</a>
+              <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-dark shadow-sm" type="submit" id="saveProfile"><i class="text-white-50"></i> Save Changes</a>
             </div>
   
             <!-- Content Row -->
@@ -185,15 +186,15 @@
                      <br>
                           <div class="form-group">
                             <label class="h1 text-lg font-weight-bolder text-dark mb-1">Name</label>
-                            <input type="text" class="form-control" placeholder="Soliudeen Ogunsola">
+                            <input type="text" class="form-control" id="editName" placeholder="Add a name">
                           </div>
                           <div class="form-group">
                             <label class="h1 text-lg font-weight-bolder text-dark control-label">Bio</label>
-                            <input type="text" class="form-control boxx" placeholder="I'm a Product Designer working on Solution Challenge">
+                            <input type="text" class="form-control boxx" placeholder="Add a new bio" id="editBio">
                           </div>
                           <div class="form-group">
                             <label class="h1 text-lg font-weight-bolder text-dark control-label">Attach CV</label>
-                            <input type="file" class="boxx" placeholder="Upload Your Cv">
+                            <input type="file" class="boxx" placeholder="Upload Your Cv" id="editCV">
                           </div>
                 </div>
               </div>
@@ -202,23 +203,23 @@
               <div class="col-xl-4 col-md-6 mb-4">
                       <div class="form-group">
                         <label class="h1 text-lg font-weight-bolder text-dark control-label">Experience</label>
-                        <input type="text" class="form-control boxx" placeholder="Product Designer at Google.Designing Awesome products for the next billion users">
+                        <input type="text" class="form-control boxx" placeholder="Add an experience" id="editExperience">
                       </div>
                       <div class="form-group">
                         <label class="h1 text-lg font-weight-bolder text-dark control-label">Skills</label>
-                        <input type="text" class="form-control" placeholder="Product Design, Ui Design, UX Design, Frontend Development">
+                        <input type="text" class="form-control" placeholder="Add skills" id="editSkills">
                       </div>
                       <div class="form-group">
                         <label class="h1 text-lg font-weight-bolder text-dark control-label">Location</label>
-                        <input type="text" class="form-control" placeholder="Abeokuta, Nigeria">
+                        <input type="text" class="form-control" placeholder="Add a location" id="editLocation">
                       </div>
                       <div class="form-group">
                         <label class="h1 text-lg font-weight-bolder text-dark control-label">Avaliability</label>
-                        <input type="text" class="form-control" placeholder="Freelance">
+                        <input type="text" class="form-control" placeholder="Add availability" id="editAvailability">
                       </div>
                       <div class="form-group">
                         <label class="h1 text-lg font-weight-bolder text-dark control-label">Hourly Rate</label>
-                        <input type="text" class="form-control" placeholder="N10000/hr">
+                        <input type="text" class="form-control" placeholder="Add hourly rate" id="editHourlyRate">
                       </div>
               </div>
   
@@ -226,15 +227,11 @@
               <div class="col-xl-4 col-md-6 mb-4">
                 <div class="form-group">
                   <label class="h1 text-lg font-weight-bolder text-dark control-label">Phone Number</label>
-                  <input type="tel" class="form-control" placeholder="+234 08104421844">
-                </div>
-                <div class="form-group">
-                  <label class="h1 text-lg font-weight-bolder text-dark control-label">Department</label>
-                  <input type="text" class="form-control" placeholder="Mathematics">
+                  <input type="tel" class="form-control" placeholder="Add phone number" id="editPhoneNumber">
                 </div>
                 <div class="form-group">
                   <label class="h1 text-lg font-weight-bolder text-dark control-label">Matric Number</label>
-                  <input type="tel" class="form-control" placeholder="20387631">
+                  <input type="tel" class="form-control" placeholder="Add Matric Number" id="editMatrciNo">
                 </div>
                 <div class="h1 text-lg font-weight-bolder text-dark mb-3">*Disclaimer</div>
                 <div class="p text-md font-weight-normal text-body mb-3">Matric number and Department are only collected for security reasons and they won't be displayed on their public profiles, neither will it be revealed to a potential employer.</div>
@@ -296,6 +293,65 @@
   <!-- Page level custom scripts -->
   <script src="../js/demo/chart-area-demo.js"></script>
 
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+    let studentData = localStorage.getItem("stuData");
+    studentData = JSON.parse(studentData);
+    let editName = document.querySelector("#editName");
+    let editBio = document.querySelector("#editBio");
+    let editCV = document.querySelector("#editCV");
+    let editExperience = document.querySelector("#editExperience");
+    let editSkills = document.querySelector("#editSkills");
+    let editLocation = document.querySelector("#editLocation");
+    let editAvailability = document.querySelector("#editAvailability");
+    let editHourlyRate = document.querySelector("#editHourlyRate");
+    let editPhoneNumber = document.querySelector("#editPhoneNumber");
+    let editMatrciNo = document.querySelector("#editMatrciNo");
+
+    // update the value of each student edit
+    editName.value = studentData.full_name ? studentData.full_name : "Add a fullname";
+    editBio.value = studentData.bio ? studentData.bio : "bio";
+    editExperience.value = studentData.experience ? studentData.experience : "Add an experience";
+    editSkills.value = studentData.proficiency ? studentData.proficiency : "Add a proficiency";
+    editLocation.value = studentData.location ? studentData.location : "Add a location";
+    editAvailability.value = studentData.availability ? studentData.availability : " Add availability";
+    editHourlyRate.value = studentData.hourly_rate ? studentData.hourly_rate : "Add ahourly rate";
+    editPhoneNumber.value = studentData.phone_number ? studentData.phone_number : "Add a phone number";
+    editMatrciNo.value = studentData.matric_no ? studentData.matric_no : "Add a matric no";
+
+    let updateProfileData = {
+      full_name: editName.value,
+      bio: editBio.value,
+      // cv: edit.value,
+      experience: editExperience.value,
+      // proficiency: editSkills.value,
+      location: editLocation.value,
+      availability: editAvailability.value,
+      hourly_rate: editHourlyRate.value,
+      phone_number: editPhoneNumber.value,
+      matric_no: typeof(editMatrciNo.value) === 'number' ? editMatrciNo.value : 0
+    }
+    let saveProfile = document.querySelector("#saveProfile");
+    saveProfile.addEventListener('click', () => {
+      console.log("Howdy")
+      fetch("https://stuaas.herokuapp.com/api/v1/user", {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(updateProfileData)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log("The update data is => ", data);
+        })
+        .catch(err => {
+          console.log("The error is => ", err);
+        })
+    });
+  });
+  </script>
 </body>
 
 </html>

@@ -81,4 +81,29 @@
             }
         }
     });
+
+    let loginBtn = document.querySelector("#loginBtn");
+    let signUpBtn = document.querySelector("#signUpBtn");
+
+    let token = localStorage.getItem("access_token");
+    // console.log(token)
+    // check if user is loged indexlet token = localStorage.getItem("access_token");
+    // Check if the user is no longer logged in
+    fetch(`https://stuaas.herokuapp.com/api/v1/user`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Got data ", data)
+        if(data.success){
+            loginBtn.style.display = 'none';
+            signUpBtn.style.display = 'none';
+        }
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
 })(jQuery);

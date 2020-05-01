@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <script type="text/javascript" src="../js/main.js"></script>
 
 </head>
 
@@ -37,7 +38,7 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Overview -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-home"></i>
           <span>Overview</span></a>
@@ -47,7 +48,7 @@
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Profile -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="profile.html">
           <i class="fas fa-fw fa-user"></i>
           <span>Profile</span>
@@ -133,7 +134,6 @@
             </li>
 
 
-
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -165,53 +165,84 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h2 mb-0 font-weight-bolder text-dark">Profile</h1>
-            <a href="edit-profile.html" class="d-none d-sm-inline-block btn btn-lg btn-dark shadow-sm"><i class="text-white-50"></i> Edit Profile</a>
+            <h1 class="h2 mb-0 font-weight-bolder text-dark">Overview</h1>
           </div>
 
           <!-- Content Row -->
           <div class="row">
 
-            <!-- Image, Name & Download CV Button -->
+            <!-- Jobs applied Card -->
             <div class="col-xl-4 col-md-6 mb-4">
-              <div class="sideber">
-                   <div class="imgprofile">
-                     <div class="imgprofile-full">
-                       <img src="../img/Rectangle 9.png"></img>
-                     </div>
-                   </div>
-                   <br>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Soliudeen Ogunsola</div>
-                      <div class="p text-md font-weight-normal text-body mb-3">I'm a Product Designer working on Solution Challenge</div>
-                      <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-light shadow-sm"><i class="text-dark"></i> Download CV</a>
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">JOBS APPLIED</div>
+                      <div class="h2 mb-0 font-weight-bold text-dark" id="overviewJobsApplied"></div>
+                      <div class="h6 mb-1 font-weight-normal text-gray-500"><span id="overviewJobsAppliedT"></span> Jobs applied this month</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-   
-            <!-- Experience, Skills, Location, Avaliability, Hourly Rate -->
+            <!-- Jobs applied Card -->
             <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Experience</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Product Designer at Google. Designing Awesome products for the next billion users</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Skills</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Product Design, Ui Design, UX Design, Frontend Development</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Location</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Abeokuta, Nigeria</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Avaliability</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">Freelance</div>
-                    <div class="h1 text-lg font-weight-bolder text-dark mb-3">Hourly Rate</div>
-                    <div class="p text-md font-weight-normal text-body mb-3">N10000/hr</div>
-            </div>
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">JOBS DONE</div>
+                      <div class="h2 mb-0 font-weight-bold text-dark" id="overviewJobsDone"></div>
+                      <div class="h6 mb-1 font-weight-normal text-gray-500"><span id="overviewJobsDoneT"></span> Jobs done this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
 
-            <!-- Phone Number,Department, Matric Number, Disclaimer -->
+            <!-- Pending Requests Card Example -->
             <div class="col-xl-4 col-md-6 mb-4">
-              <div class="h1 text-lg font-weight-bolder text-dark mb-1>">Phone Number</div>
-              <div class="p text-md font-weight-normal text-body mb-3">+234 08104421844</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">Department</div>
-              <div class="p text-md font-weight-normal text-body mb-3">Mathematics</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">Matric Number</div>
-              <div class="p text-md font-weight-normal text-body mb-3">20387631</div>
-              <div class="h1 text-lg font-weight-bolder text-dark mb-3">*Disclaimer</div>
-              <div class="p text-md font-weight-normal text-body mb-3">Matric number and Department are only collected for security reasons and they won't be displayed on their public profiles, neither will it be revealed to a potential employer.</div>
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">HIRE Requests</div>
+                      <div class="h2 mb-0 font-weight-bold text-gray-800" id="overviewHireRequest"></div>
+                      <div class="h6 mb-auto font-weight-normal text-gray-500"><span id="overviewHireRequestT"></span> hire requests this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-auto">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-dark">Profile View</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
         <!-- /.container-fluid -->
 
       </div>
@@ -266,6 +297,37 @@
 
   <!-- Page level custom scripts -->
   <script src="../js/demo/chart-area-demo.js"></script>
+
+  <!-- Main script for this page -->
+  <script type="text/javascript">
+    let baseUrl = "https://stuaas.herokuapp.com/api/v1";
+    // let token = localStorage.getItem("access_token");
+    // Fetch the overview data of students
+    let overviewJobsApplied = document.querySelector("#overviewJobsApplied");
+    let overviewJobsDone = document.querySelector("#overviewJobsDone");
+    let overviewHireRequest = document.querySelector("#overviewHireRequest");
+    let overviewJobsAppliedT = document.querySelector("#overviewJobsAppliedT");
+    let overviewJobsDoneT = document.querySelector("#overviewJobsDoneT");
+    let overviewHireRequestT = document.querySelector("#overviewHireRequestT");
+    fetch(`${baseUrl}/student/overview`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("The data is ", data);
+        overviewJobsApplied.textContent = data.payload.data.jobs_applied_for;
+        overviewJobsDone.textContent = data.payload.data.job_offers_received;
+        overviewHireRequest.textContent = data.payload.data.jobs_done;
+        overviewJobsAppliedT.textContent = data.payload.data.jobs_applied_for;
+        overviewJobsDoneT.textContent = data.payload.data.job_offers_received;
+        overviewHireRequestT.textContent = data.payload.data.jobs_done;
+    })
+    .catch(err => {
+        console.log(err)
+    })
+  </script>
 
 </body>
 
