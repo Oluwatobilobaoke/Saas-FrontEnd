@@ -4,7 +4,7 @@ SaaS is a Solution Built for the **DSC Solution Challenge 2020** that aims to em
 This way, students can apply for jobs, and organizations can hire student with matching profile qualifications.
 
 This repository holds the Front end code for the project that has two parts to it:
-1) The Front end 
+1) [The Front end](https://stuass.works/) 
 2) [The Back end](https://github.com/Iyiola-am/saas)
 
 Submission should be graded based on the master branch. However, we are enthusiastic about this project and committed to improving the project beyond what we have at submission for the Solutions challenge. Hence, we would keep actively working on it on the **staging branch**. You can always check for recent updates on staging.
